@@ -35,6 +35,20 @@ public class GreenMask : Mask
             masks.Add(mask);
             Debug.Log(cord);
         }
+
+        Vector2Int first = positions[0];
+        positions.RemoveAt(0);
+        positions.Add(first);
+
+        for (int i = 0; i < positions.Count; i++)
+        {
+            Vector2Int pos = positions[i];
+            Mask mask = masks[i];
+            
+            mask.Row = pos.x;
+            mask.Column = pos.y;
+            board.SetMaskAt(pos.x, pos.y, mask.gameObject);
+        }
         
         
     }
