@@ -34,6 +34,8 @@ public class GreenMask : Mask
                 continue;
             }
             
+            if (board[cord.x, cord.y] == null) continue;
+            
             Mask mask = board[cord.x, cord.y].GetComponent<Mask>();
             positions.Add(cord);
             masks.Add(mask);
@@ -56,6 +58,7 @@ public class GreenMask : Mask
             board.AnimateMoveMaskFromTo(prev.x, prev.y, pos.x, pos.y);
         }
         
+        board.SetMaskAt(Row, Column, null);
         Destroy(gameObject);
     }
 }
