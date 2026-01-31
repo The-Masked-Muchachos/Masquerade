@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,13 @@ public class RedMask : Mask
     {
         Debug.Log("RedMask activated");
 
+        StartCoroutine(ActivateAfterDelay(board));
+    }
+
+    private IEnumerator ActivateAfterDelay(Board board)
+    {
+        yield return new WaitForSeconds(0.2f);
+        
         List<GameObject> adjacentCells = new List<GameObject>();
         if (Row > 0) adjacentCells.Add(board[Row - 1, Column]);
         if (Row < board.NumberOfRows - 1) adjacentCells.Add(board[Row + 1, Column]);

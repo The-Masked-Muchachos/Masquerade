@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,12 @@ public class YellowMask : Mask
     {
         Debug.Log("YellowMask activated");
 
+        StartCoroutine(ActivateAfterDelay(board));
+    }
+
+    private IEnumerator ActivateAfterDelay(Board board)
+    {
+        yield return new WaitForSeconds(0.2f);
         List<GameObject> adjacentCells = new List<GameObject>();
         if (Column > 0) adjacentCells.Add(board[Row, Column - 1]);
         if (Column < board.NumberOfColumns - 1) adjacentCells.Add(board[Row, Column + 1]);
