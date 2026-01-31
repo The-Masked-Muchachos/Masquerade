@@ -13,8 +13,8 @@ public class MaskFactory : MonoBehaviour
             case 'S':
                 GameObject silverMask = Instantiate(maskPrefab, new Vector2(row, column), Quaternion.identity);
                 silverMask.AddComponent<SilverMask>();
-                silverMask.GetComponent<SilverMask>().Row = row;
-                silverMask.GetComponent<SilverMask>().Column = column;
+                silverMask.GetComponent<Mask>().Row = row;
+                silverMask.GetComponent<Mask>().Column = column;
 
                 return silverMask.GetComponent<SilverMask>();
             // case 'R':
