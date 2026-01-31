@@ -1,10 +1,10 @@
 public abstract class Mask
 {
     // The mask's own row
-    private int row;
+    protected int row;
 
     // The mask's own column
-    private int column;
+    protected int column;
 
     public Mask(int row, int column)
     {
