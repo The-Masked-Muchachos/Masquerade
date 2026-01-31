@@ -21,7 +21,7 @@ public class Board<T>
     // Gets the mask at a specified coordinate
     public T GetMaskAt(int row, int column) => currentState[row, column];
 
-    // Undos to a previous board state
+    // Undoes to a previous board state
     public void Undo();
 
     // Sets the value of a cell in the currentState
