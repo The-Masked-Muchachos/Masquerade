@@ -1,5 +1,5 @@
---SYR
--GG-R
--G---
-----R
--SYYY
+---SYR
+--GG-R
+--G---
+-----R
+--SYYY
