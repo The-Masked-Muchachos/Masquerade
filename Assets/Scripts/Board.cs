@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class Board : MonoBehaviour
@@ -69,7 +71,7 @@ public class Board : MonoBehaviour
     {
         List<char[]> maskTypes = new List<char[]>();
 
-        foreach (string line in textAsset.text.Split('\n'))
+        foreach (string line in textAsset.text.Split(new string[] {"\r\n", "\n"}, StringSplitOptions.None))
         {
             char[] cells = line.ToCharArray();
             maskTypes.Add(cells);
