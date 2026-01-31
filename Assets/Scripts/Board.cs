@@ -25,7 +25,6 @@ public class Board : MonoBehaviour
 
     void Start()
     {
-        LoadFromPlaintext("Assets/Levels/Level-2/level-02-layout.mqdl");
     }
 
     // All the masks currently on the board
@@ -54,31 +53,27 @@ public class Board : MonoBehaviour
     }
 
     // Creates a new board using a file
-    private void LoadFromPlaintext(string filename)
+    public void LoadFromTextAsset(TextAsset textAsset)
     {
-        using (var reader = new StreamReader(filename))
+        List<char[]> maskTypes = new List<char[]>();
+
+        foreach (string line in textAsset.text.Split('\n'))
         {
-            List<char[]> maskTypes = new List<char[]>();
+            char[] cells = line.ToCharArray();
+            maskTypes.Add(cells);
+        }
 
-            string line;
-            while ((line = reader.ReadLine()) != null)
+        int rows = maskTypes.Count;
+        int columns = maskTypes[0].Length;
+
+        pastStates = new Stack<GameObject[,]>();
+        currentState = new GameObject[rows, columns];
+
+        for (int row = 0; row < rows; row++)
+        {
+            for (int column = 0; column < columns; column++)
             {
-                char[] cells = line.ToCharArray();
-                maskTypes.Add(cells);
-            }
-
-            int rows = maskTypes.Count;
-            int columns = maskTypes[0].Length;
-
-            pastStates = new Stack<GameObject[,]>();
-            currentState = new GameObject[rows, columns];
-
-            for (int row = 0; row < rows; row++)
-            {
-                for (int column = 0; column < columns; column++)
-                {
-                    currentState[row, column] = GetComponent<MaskFactory>().CreateMaskOfType(maskTypes[row][column], row, column);
-                }
+                currentState[row, column] = GetComponent<MaskFactory>().CreateMaskOfType(maskTypes[row][column], row, column);
             }
         }
     }
