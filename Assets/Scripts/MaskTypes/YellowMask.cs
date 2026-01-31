@@ -18,6 +18,7 @@ public class YellowMask : Mask
             if (cell != null &&
                 (
                     cell.GetComponent<RedMask>() != null ||
+                    cell.GetComponent<OrangeMask>() != null ||
                     cell.GetComponent<YellowMask>() != null
                 )
             )
