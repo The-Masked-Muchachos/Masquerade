@@ -55,9 +55,5 @@ public class GreenMask : Mask
             board.SetMaskAt(pos.x, pos.y, mask.gameObject);
             board.AnimateMoveMaskFromTo(prev.x, prev.y, pos.x, pos.y);
         }
-        
-        
-        
-        
     }
 }
