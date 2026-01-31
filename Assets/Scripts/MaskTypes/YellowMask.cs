@@ -16,21 +16,22 @@ public class YellowMask : Mask
     public override void Activate(Board board)
     {
         Debug.Log("YellowMask activated");
+        LevelManager.Instance.MoveInProgress();
 
         StartCoroutine(ActivateAfterDelay(board));
     }
 
     private IEnumerator ActivateAfterDelay(Board board)
     {
-        yield return new WaitForSeconds(0.2f);
-
-        Instantiate(explosionPrefab, new Vector2(Column, -Row), Quaternion.identity);
-
         List<GameObject> adjacentCells = new List<GameObject>();
         if (Column > 0) adjacentCells.Add(board[Row, Column - 1]);
         if (Column < board.NumberOfColumns - 1) adjacentCells.Add(board[Row, Column + 1]);
 
         board.SetMaskAt(Row, Column, null);
+
+        yield return new WaitForSeconds(0.2f);
+
+        Instantiate(explosionPrefab, new Vector2(Column, -Row), Quaternion.identity);
 
         foreach (GameObject cell in adjacentCells)
         {

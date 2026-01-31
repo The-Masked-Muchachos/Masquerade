@@ -10,7 +10,10 @@ public class SilverMask : Mask
     public override void Activate(Board board)
     {
         Debug.Log("SilverMask activated");
+        LevelManager.Instance.MoveInProgress();
+
         board.SetMaskAt(Row, Column, null);
+
         board.AnimateRemoveMaskAt(Row, Column);
         Destroy(gameObject);
     }

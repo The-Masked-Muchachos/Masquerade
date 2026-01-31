@@ -16,21 +16,22 @@ public class RedMask : Mask
     public override void Activate(Board board)
     {
         Debug.Log("RedMask activated");
+        LevelManager.Instance.MoveInProgress();
 
         StartCoroutine(ActivateAfterDelay(board));
     }
 
     private IEnumerator ActivateAfterDelay(Board board)
     {
-        yield return new WaitForSeconds(0.2f);
-
-        Instantiate(explosionPrefab, new Vector2(Column, -Row), Quaternion.identity);
-        
         List<GameObject> adjacentCells = new List<GameObject>();
         if (Row > 0) adjacentCells.Add(board[Row - 1, Column]);
         if (Row < board.NumberOfRows - 1) adjacentCells.Add(board[Row + 1, Column]);
 
         board.SetMaskAt(Row, Column, null);
+
+        yield return new WaitForSeconds(0.2f);
+
+        Instantiate(explosionPrefab, new Vector2(Column, -Row), Quaternion.identity);
 
         foreach (GameObject cell in adjacentCells)
         {

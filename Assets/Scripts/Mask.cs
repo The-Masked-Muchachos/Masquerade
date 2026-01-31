@@ -41,7 +41,7 @@ public abstract class Mask : MonoBehaviour
                 Board.Instance.SaveCurrentState();
 
                 Activate(Board.Instance);
-                LevelManager.Instance.NextMove();
+                LevelManager.Instance.MoveInProgress();
                 return;
             }
 

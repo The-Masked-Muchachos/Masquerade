@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -96,6 +97,26 @@ public class LevelManager : MonoBehaviour
                 moves.Add(MoveType.Swap);
             }
         }
+    }
+
+    public void CheckBoard()
+    {
+        if (Board.Instance.IsComplete())
+        {
+            GameManager.Instance.NextLevel();
+        }
+    }
+
+    public void MoveInProgress()
+    {
+        StopAllCoroutines();
+        StartCoroutine(NextMoveAfterDone());
+    }
+
+    public IEnumerator NextMoveAfterDone()
+    {
+        yield return new WaitForSeconds(0.25f);
+        NextMove();
     }
 
     public void NextMove()

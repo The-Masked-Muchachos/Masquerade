@@ -10,5 +10,6 @@ public class WeldingMask : Mask
     public override void Activate(Board board)
     {
         Debug.Log("WeldingMask activated");
+        LevelManager.Instance.MoveInProgress();
     }
 }
