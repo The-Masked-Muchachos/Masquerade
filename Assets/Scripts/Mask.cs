@@ -6,7 +6,9 @@ using UnityEngine.UIElements;
 public abstract class Mask : MonoBehaviour
 {
     private Camera cam;
+    [NonSerialized]
     public int Row;
+    [NonSerialized]
     public int Column;
 
     public void OnClick()
