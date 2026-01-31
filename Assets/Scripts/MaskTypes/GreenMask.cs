@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class GreenMask : Mask
@@ -14,9 +15,12 @@ public class GreenMask : Mask
     {
         List<Vector2Int> positions = new List<Vector2Int>();
         List<Mask> masks = new List<Mask>();
+        
+        Debug.Log(rotations.GetLength(0));
 
-        for (int i = 0; i < rotations.Length; i++)
+        for (int i = 0; i < rotations.GetLength(0); i++)
         {
+            Debug.Log(i);
             Vector2Int cord = new Vector2Int(base.Row, base.Column);
             cord.x += rotations[i, 0];
             cord.y += rotations[i, 1];
@@ -33,7 +37,7 @@ public class GreenMask : Mask
             Mask mask = board[cord.x, cord.y].GetComponent<Mask>();
             positions.Add(cord);
             masks.Add(mask);
-            Debug.Log(cord);
+            Debug.Log(rotations[i, 0] + "x" + rotations[i, 1] + "y  |" + cord);
         }
 
         Vector2Int first = positions[0];
@@ -44,11 +48,15 @@ public class GreenMask : Mask
         {
             Vector2Int pos = positions[i];
             Mask mask = masks[i];
+            Vector2Int prev = new Vector2Int(mask.Row, mask.Column);
             
             mask.Row = pos.x;
             mask.Column = pos.y;
             board.SetMaskAt(pos.x, pos.y, mask.gameObject);
+            board.AnimateMoveMaskFromTo(prev.x, prev.y, pos.x, pos.y);
         }
+        
+        
         
         
     }

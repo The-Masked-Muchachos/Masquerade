@@ -182,7 +182,7 @@ public class Board : MonoBehaviour
     {
         GameObject mask = currentState[toRow, toColumn];
 
-        //TODO: Animation
+        // TODO: Animation
         // IEnumerator GlideToPosition(GameObject mask, Vector2 from, Vector2 to)
         // {
         //     mask.transform.position = from;
@@ -197,9 +197,9 @@ public class Board : MonoBehaviour
         //     mask.transform.position = to;
         // }
 
+        // StartCoroutine(GlideToPosition(mask, mask.transform.position, new Vector2(toColumn, -toRow)));
 
-
-
+        mask.transform.position = new Vector2(mask.GetComponent<Mask>().Column, -mask.GetComponent<Mask>().Row);
     }
 
     // Swap two masks from different cells

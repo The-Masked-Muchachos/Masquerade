@@ -12,6 +12,8 @@ public class MaskFactory : MonoBehaviour
     private GameObject yellowMaskPrefab;
     [SerializeField]
     private GameObject weldingMaskPrefab;
+    [SerializeField]
+    private GameObject greenMaskPrefab;
 
     public GameObject CreateMaskOfType(char type, int row, int column)
     {
@@ -44,8 +46,12 @@ public class MaskFactory : MonoBehaviour
                 return orangeMask;
             // case 'B':
             //     break;
-            // case 'G':
-            //     break;
+            case 'G':
+                GameObject greenMask = Instantiate(greenMaskPrefab, new Vector2(column, -row), Quaternion.identity);
+                greenMask.GetComponent<Mask>().Row = row;
+                greenMask.GetComponent<Mask>().Column = column;
+
+                return greenMask;
             // case 'D':
             //     break;
             // case 'P':
