@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 
 public class Board
 {
@@ -23,6 +24,42 @@ public class Board
     // Gets the mask at a specified coordinate
     public Mask this[int row, int column] {
         get => currentState[row, column];
+        private set => currentState[row, column] = value;
+    }
+
+    // Creates a new empty board
+    private Board(int rows, int columns) {
+        pastStates = new Stack<Mask[,]>();
+        currentState = new Mask[rows, columns];
+    }
+
+    // Creates a new board using a file
+    public static Board FromPlaintext(string filename)
+    {
+        using (var reader = new StreamReader(filename))
+        {
+            List<char[]> masks = new List<char[]>();
+
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                char[] cells = line.ToCharArray();
+                masks.Add(cells);
+            }
+
+            int rows = masks.Count;
+            int columns = masks[0].Length;
+
+            Board board = new Board(rows, columns);
+            for(int row = 0; row < rows; row++) {
+                for(int column = 0; column < columns; column++)
+                {
+                    board[row, column] = MaskFactory.CreateMaskOfType(masks[row][column]);
+                }
+            }
+
+            return board;
+        }
     }
 
     // Undoes to a previous board state
