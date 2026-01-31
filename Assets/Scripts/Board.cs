@@ -98,6 +98,7 @@ public class Board : MonoBehaviour
     // Remove an existing mask from a cell
     public void RemoveMaskAt(int row, int column)
     {
+        Destroy(currentState[row, column].gameObject);
         setMaskAt(row, column, null);
 
         //TODO: Play remove mask animation
