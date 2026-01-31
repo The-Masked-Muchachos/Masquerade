@@ -25,7 +25,7 @@ public class Board : MonoBehaviour
 
     void Start()
     {
-        LoadFromPlaintext("Assets/Levels/temp.txt");
+        LoadFromPlaintext("Assets/Levels/Level-2/level-02-layout.mqdl");
     }
 
     // All the masks currently on the board

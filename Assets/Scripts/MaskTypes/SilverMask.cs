@@ -9,5 +9,6 @@ public class SilverMask : Mask
         Debug.Log("SilverMask activated");
         board.SetMaskAt(Row, Column, null);
         board.AnimateRemoveMaskAt(Row, Column);
+        Destroy(gameObject);
     }
 }
