@@ -25,18 +25,10 @@ public class GreenMask : Mask
             cord.x += rotations[i, 0];
             cord.y += rotations[i, 1];
 
-            if (cord.x < 0 || cord.x > board.NumberOfColumns)
-            {
-                continue;
-            }
-            if (cord.y < 0 || cord.y > board.NumberOfRows)
-            {
-                continue;
-            }
+            Mask mask;
+            if (board[cord.x, cord.y] == null) { mask = null; }
+            else { mask = board[cord.x, cord.y].GetComponent<Mask>(); }
             
-            if (board[cord.x, cord.y] == null) continue;
-            
-            Mask mask = board[cord.x, cord.y].GetComponent<Mask>();
             positions.Add(cord);
             masks.Add(mask);
             Debug.Log(rotations[i, 0] + "x" + rotations[i, 1] + "y  |" + cord);
@@ -45,16 +37,35 @@ public class GreenMask : Mask
         Vector2Int first = positions[0];
         positions.RemoveAt(0);
         positions.Add(first);
+        
+        /*Debug.Log(positions);
+        Debug.Log(masks);*/
+
+        for (int i = 0; i < positions.Count; i++)
+        {
+            Debug.Log(positions[i]);
+        }
 
         for (int i = 0; i < positions.Count; i++)
         {
             Vector2Int pos = positions[i];
-            Mask mask = masks[i];
-            Vector2Int prev = new Vector2Int(mask.Row, mask.Column);
+            Vector2Int prev;
+            if (i > 0) { prev = new Vector2Int(positions[i-1].x, positions[i-1].y); }
+            else {prev = new Vector2Int(positions[positions.Count-1].x, positions[positions.Count-1].y); }
+            Debug.Log(prev);
             
-            mask.Row = pos.x;
-            mask.Column = pos.y;
-            board.SetMaskAt(pos.x, pos.y, mask.gameObject);
+            Mask mask = masks[i];
+            if (mask != null)
+            {
+                mask.Row = pos.x;
+                mask.Column = pos.y;
+                board.SetMaskAt(pos.x, pos.y, mask.gameObject);
+            }
+            else
+            {
+                board.SetMaskAt(pos.x, pos.y, null);
+            }
+            
             board.AnimateMoveMaskFromTo(prev.x, prev.y, pos.x, pos.y);
         }
         

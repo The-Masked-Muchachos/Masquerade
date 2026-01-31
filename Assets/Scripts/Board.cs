@@ -161,6 +161,7 @@ public class Board : MonoBehaviour
     public void AnimateRemoveMaskAt(int row, int column)
     {
         //TODO: Play remove mask animation
+        GetComponent<AudioSource>().Play();
     }
 
     // Add a mask to an empty cell
@@ -181,6 +182,7 @@ public class Board : MonoBehaviour
     public void AnimateMoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
     {
         GameObject mask = currentState[toRow, toColumn];
+        if (mask == null) return;
 
         // TODO: Animation
         IEnumerator GlideToPosition(GameObject mask, Vector2 from, Vector2 to)
@@ -193,6 +195,7 @@ public class Board : MonoBehaviour
                 mask.transform.position = from + displacement * i;
                 yield return null;
             }
+            
 
             mask.transform.position = to;
         }
