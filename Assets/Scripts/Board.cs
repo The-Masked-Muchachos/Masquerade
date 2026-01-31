@@ -84,6 +84,17 @@ public class Board : MonoBehaviour
 
     }
 
+    // Checks if all masks have been cleared
+    public bool IsComplete()
+    {
+        foreach (GameObject mask in currentState)
+        {
+            if (mask != null) return false;
+        }
+
+        return true;
+    }
+
     // Sets the value of a cell in the currentState
     public void SetMaskAt(int row, int column, GameObject? mask)
     {
