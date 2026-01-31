@@ -15,15 +15,19 @@ public class YellowMask : Mask
 
         foreach (GameObject cell in adjacentCells)
         {
-            if (cell != null &&
-                (
-                    cell.GetComponent<RedMask>() != null ||
-                    cell.GetComponent<OrangeMask>() != null ||
-                    cell.GetComponent<YellowMask>() != null
-                )
+            if (cell == null) continue;
+            if (
+                cell.GetComponent<RedMask>() != null ||
+                cell.GetComponent<OrangeMask>() != null ||
+                cell.GetComponent<YellowMask>() != null
             )
             {
                 cell.GetComponent<Mask>().Activate(board);
+            }
+            else
+            {
+                board.SetMaskAt(cell.GetComponent<Mask>().Row, cell.GetComponent<Mask>().Column, null);
+                Destroy(cell);
             }
         }
 
