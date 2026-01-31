@@ -25,12 +25,7 @@ public class MaskFactory : MonoBehaviour
 
                 return silverMask;
             case 'R':
-<<<<<<< HEAD
-                GameObject redMask = Instantiate(maskPrefab, new Vector2(row, column), Quaternion.identity);
-                /*redMask.AddComponent<RedMask>();*/
-=======
                 GameObject redMask = Instantiate(redMaskPrefab, new Vector2(column, -row), Quaternion.identity);
->>>>>>> 9d2147455f9e826cd1c0ddb2f913f447d121e344
                 redMask.GetComponent<Mask>().Row = row;
                 redMask.GetComponent<Mask>().Column = column;
 
