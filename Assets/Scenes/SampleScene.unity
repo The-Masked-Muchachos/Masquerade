@@ -427,7 +427,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789494b565dbf4fba822ce8f86fc131b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskFactory
-  maskPrefab: {fileID: 5093827835953011100, guid: 8864a556d2da14e0f8a422a1fd69e17d, type: 3}
+  silverMaskPrefab: {fileID: 3099907551164813661, guid: 62df1c6c1c63845a6b185e172685b01c, type: 3}
+  redMaskPrefab: {fileID: 4255523891115535418, guid: 9b7fe9a2b4a714ac6b29849b8e9aa214, type: 3}
+  orangeMaskPrefab: {fileID: 3716248505167492883, guid: 738ebc7656ea64e6da47603cd15b001c, type: 3}
+  yellowMaskPrefab: {fileID: 451694068050168249, guid: c2ed7e638a1cf476599d919bd2a15921, type: 3}
+  weldingMaskPrefab: {fileID: 1108884747298211855, guid: 6c7df617c665a4574a5355696f4f9cfa, type: 3}
 --- !u!114 &1809430708
 MonoBehaviour:
   m_ObjectHideFlags: 0
