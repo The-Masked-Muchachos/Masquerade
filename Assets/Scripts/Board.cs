@@ -54,7 +54,7 @@ public class Board
             for(int row = 0; row < rows; row++) {
                 for(int column = 0; column < columns; column++)
                 {
-                    board[row, column] = MaskFactory.CreateMaskOfType(masks[row][column]);
+                    board[row, column] = MaskFactory.CreateMaskOfType(masks[row][column], row, column);
                 }
             }
 

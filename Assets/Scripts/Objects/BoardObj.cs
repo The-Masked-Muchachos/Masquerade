@@ -1,14 +1,14 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
-using JetBrains.Annotations;
 using UnityEngine;
 
 
 public class BoardObj : MonoBehaviour
 {
-    [CanBeNull] private static BoardObj _instance;
-
+    private static BoardObj _instance;
+    public Board board;
+    
     public static BoardObj Instance
     {
         get
@@ -27,12 +27,12 @@ public class BoardObj : MonoBehaviour
         }
     }
 
-    public Board board;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        board = Board.FromPlaintext("Assets/Levels/temp.txt");
     }
 
     // Update is called once per frame
