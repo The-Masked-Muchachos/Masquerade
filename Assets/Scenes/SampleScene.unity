@@ -427,7 +427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   layouts:
-  - {fileID: 4900000, guid: bd9fd32e98604c258a1618ec8221692c, type: 3}
   - {fileID: 4900000, guid: e98731ff221d84d2ab0da7a0bdee6f69, type: 3}
   - {fileID: 4900000, guid: 1e6706075f61a4bfc8c92f56c08f3951, type: 3}
   - {fileID: 4900000, guid: ec5c3ba30f33a49ddaca2dae8a405858, type: 3}
@@ -435,8 +434,8 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 9dee73d6d36d24d36a05226319f5356a, type: 3}
   - {fileID: 4900000, guid: 4e065c5fb13244f14bc139c04362a8d5, type: 3}
   - {fileID: 4900000, guid: 3042c93e0786a4ee48b3ac36980d4d4f, type: 3}
+  - {fileID: 4900000, guid: bd9fd32e98604c258a1618ec8221692c, type: 3}
   movesets:
-  - {fileID: 4900000, guid: 8cd786b798594fbfa2190123e237cece, type: 3}
   - {fileID: 4900000, guid: c690c48ebac874d189430496ae893255, type: 3}
   - {fileID: 4900000, guid: e888c1ed25fe74daeb79b42f239decf2, type: 3}
   - {fileID: 4900000, guid: fc24e679e978d4421810d6fef562fec2, type: 3}
@@ -444,6 +443,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: b83247e9754de4964b6c7327a3737ec1, type: 3}
   - {fileID: 4900000, guid: cdbe61b8dd5b24aaa93abede415774c9, type: 3}
   - {fileID: 4900000, guid: e075f4c7482624ad38132050a99c69ff, type: 3}
+  - {fileID: 4900000, guid: 8cd786b798594fbfa2190123e237cece, type: 3}
 --- !u!4 &700286130
 Transform:
   m_ObjectHideFlags: 0
