@@ -1,7 +1,6 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using UnityEngine;
 
 public class Board : MonoBehaviour
@@ -181,9 +180,25 @@ public class Board : MonoBehaviour
     // Move mask from one cell to another
     public void AnimateMoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
     {
-        GameObject originalMask = currentState[fromRow, fromColumn];
+        GameObject mask = currentState[toRow, toColumn];
 
         //TODO: Animation
+        // IEnumerator GlideToPosition(GameObject mask, Vector2 from, Vector2 to)
+        // {
+        //     mask.transform.position = from;
+        //     Vector2 displacement = to - from;
+            
+        //     for (float i = 0; i < 1; i += 0.01f)
+        //     {
+        //         mask.transform.position = from + displacement * i;
+        //         yield return null;
+        //     }
+
+        //     mask.transform.position = to;
+        // }
+
+
+
 
     }
 
@@ -193,8 +208,25 @@ public class Board : MonoBehaviour
         Mask mask1 = currentState[row1, column1].GetComponent<Mask>();
         Mask mask2 = currentState[row2, column2].GetComponent<Mask>();
 
+        IEnumerator GlideToPosition(GameObject mask, Vector2 from, Vector2 to)
+        {
+            mask.transform.position = from;
+            Vector2 displacement = to - from;
+            
+            for (float i = 0; i < 1; i += 0.01f)
+            {
+                mask.transform.position = from + displacement * i;
+                yield return null;
+            }
+
+            mask.transform.position = to;
+        }
+
         //TODO: Animation
-        mask1.gameObject.transform.position = new Vector2(mask1.Column, -mask1.Row);
-        mask2.gameObject.transform.position = new Vector2(mask2.Column, -mask2.Row);
+        // mask1.gameObject.transform.position = new Vector2(mask1.Column, -mask1.Row);
+        // mask2.gameObject.transform.position = new Vector2(mask2.Column, -mask2.Row);
+
+        StartCoroutine(GlideToPosition(mask1.gameObject, mask1.gameObject.transform.position, new Vector2(mask1.Column, -mask1.Row)));
+        StartCoroutine(GlideToPosition(mask2.gameObject, mask2.gameObject.transform.position, new Vector2(mask2.Column, -mask2.Row)));
     }
 }
