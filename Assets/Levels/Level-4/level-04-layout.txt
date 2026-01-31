@@ -2,5 +2,5 @@
 -RYYR
 GRYRR
 --RRR
--RRGR
+-RRSR
 YRRYY
