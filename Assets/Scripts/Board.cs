@@ -26,23 +26,44 @@ public class Board<T>
     }
 
     // Undoes to a previous board state
-    public void Undo();
+    public void Undo()
+    {
+
+    };
 
     // Sets the value of a cell in the currentState
-    private void setMaskAt(int row, int column, T? mask);
+    private void setMaskAt(int row, int column, T? mask)
+    {
+
+    };
 
     // Remove an existing mask from a cell
-    public void RemoveMaskAt(int row, int column);
+    public void RemoveMaskAt(int row, int column)
+    {
+
+    };
 
     // Add a mask to an empty cell
-    public void AddMaskAt(int row, int column, T mask);
+    public void AddMaskAt(int row, int column, T mask)
+    {
+
+    };
 
     // Change one mask into another
-    public void ReplaceMaskAt(int row, int column, T mask);
+    public void ReplaceMaskAt(int row, int column, T mask)
+    {
+
+    };
 
     // Move mask from one cell to another
-    public void MoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn);
+    public void MoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
+    {
+
+    };
 
     // Swap two masks from different cells
-    public void SwapMasksAt(int row1, int column1, int row2, int column2);
+    public void SwapMasksAt(int row1, int column1, int row2, int column2)
+    {
+
+    };
 }
