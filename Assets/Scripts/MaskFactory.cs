@@ -5,7 +5,7 @@ public class MaskFactory : MonoBehaviour
     [SerializeField]
     private GameObject maskPrefab;
 
-    public Mask CreateMaskOfType(char type, int row, int column)
+    public GameObject CreateMaskOfType(char type, int row, int column)
     {
         // TODO add mask subclasses
         switch(type)
@@ -16,9 +16,14 @@ public class MaskFactory : MonoBehaviour
                 silverMask.GetComponent<Mask>().Row = row;
                 silverMask.GetComponent<Mask>().Column = column;
 
-                return silverMask.GetComponent<SilverMask>();
-            // case 'R':
-            //     break;
+                return silverMask;
+            case 'R':
+                GameObject redMask = Instantiate(maskPrefab, new Vector2(row, column), Quaternion.identity);
+                redMask.AddComponent<RedMask>();
+                redMask.GetComponent<Mask>().Row = row;
+                redMask.GetComponent<Mask>().Column = column;
+
+                return redMask;
             // case 'Y':
             //     break;
             // case 'O':
@@ -34,11 +39,10 @@ public class MaskFactory : MonoBehaviour
             case 'W':
                 GameObject weldingMask = Instantiate(maskPrefab, new Vector2(row, column), Quaternion.identity);
                 weldingMask.AddComponent<WeldingMask>();
-                weldingMask.GetComponent<WeldingMask>().Row = row;
-                weldingMask.GetComponent<WeldingMask>().Column = column;
+                weldingMask.GetComponent<Mask>().Row = row;
+                weldingMask.GetComponent<Mask>().Column = column;
 
-                return weldingMask.GetComponent<WeldingMask>();
-            //     break;
+                return weldingMask;
             default:
                 break;
         }

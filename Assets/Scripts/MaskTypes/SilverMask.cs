@@ -7,6 +7,7 @@ public class SilverMask : Mask
     public override void Activate(Board board)
     {
         Debug.Log("SilverMask activated");
-        board.RemoveMaskAt(base.Row, base.Column);
+        board.SetMaskAt(Row, Column, null);
+        board.AnimateRemoveMaskAt(Row, Column);
     }
 }
