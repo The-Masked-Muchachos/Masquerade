@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedMask : Mask
+public class YellowMask : Mask
 {
     public override void Activate(Board board)
     {
-        Debug.Log("RedMask activated");
+        Debug.Log("YellowMask activated");
 
         List<GameObject> adjacentCells = new List<GameObject>();
-        if (Row > 0) adjacentCells.Add(board[Row - 1, Column]);
-        if (Row < board.NumberOfRows - 1) adjacentCells.Add(board[Row + 1, Column]);
+        if (Column > 0) adjacentCells.Add(board[Row, Column - 1]);
+        if (Column < board.NumberOfColumns - 1) adjacentCells.Add(board[Row, Column + 1]);
 
         board.SetMaskAt(Row, Column, null);
 

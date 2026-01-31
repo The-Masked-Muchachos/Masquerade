@@ -24,8 +24,13 @@ public class MaskFactory : MonoBehaviour
                 redMask.GetComponent<Mask>().Column = column;
 
                 return redMask;
-            // case 'Y':
-            //     break;
+            case 'Y':
+                GameObject yellowMask = Instantiate(maskPrefab, new Vector2(column, row), Quaternion.identity);
+                yellowMask.AddComponent<YellowMask>();
+                yellowMask.GetComponent<Mask>().Row = row;
+                yellowMask.GetComponent<Mask>().Column = column;
+
+                return yellowMask;
             // case 'O':
             //     break;
             // case 'B':
