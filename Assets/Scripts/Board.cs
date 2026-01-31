@@ -19,7 +19,9 @@ public class Board<T>
     }
 
     // Gets the mask at a specified coordinate
-    public T GetMaskAt(int row, int column) => currentState[row, column];
+    public T this[int row, int column] {
+        get => currentState[row, column];
+    }
 
     // Undoes to a previous board state
     public void Undo();
