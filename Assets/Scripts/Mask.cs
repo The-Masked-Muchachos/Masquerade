@@ -27,6 +27,7 @@ public abstract class Mask : MonoBehaviour
         if (hit.collider && (hit.collider.gameObject.GetInstanceID() == this.gameObject.GetInstanceID()) && Mouse.current.leftButton.wasPressedThisFrame)
         {
             Debug.Log(hit.collider.gameObject.GetInstanceID());
+            Activate(Board.Instance);
         }
     }
 
