@@ -13,5 +13,5 @@ public abstract class Mask
     }
 
     // Activates the masks's special function
-    public abstract void Activate(Board<Mask> board);
+    public abstract void Activate(Board board);
 }
