@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8901950828870572254}
   - component: {fileID: 281873450784945840}
-  - component: {fileID: 5958181372787970311}
   - component: {fileID: 6461791563875036378}
   m_Layer: 0
   m_Name: Mask
@@ -93,18 +92,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5958181372787970311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5093827835953011100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d612964dbbad4e8eacb0a236e16d2156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MaskObj
 --- !u!61 &6461791563875036378
 BoxCollider2D:
   m_ObjectHideFlags: 0
