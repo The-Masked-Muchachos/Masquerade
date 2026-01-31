@@ -26,6 +26,7 @@ public class MaskFactory
             case 'W':
                 break;
             default:
+                break;
         }
     }
 }
