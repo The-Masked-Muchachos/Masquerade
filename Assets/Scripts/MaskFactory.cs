@@ -8,7 +8,7 @@ public class MaskFactory : MonoBehaviour
     public GameObject CreateMaskOfType(char type, int row, int column)
     {
         // TODO add mask subclasses
-        switch(type)
+        switch (type)
         {
             case 'S':
                 GameObject silverMask = Instantiate(maskPrefab, new Vector2(column, -row), Quaternion.identity);
@@ -31,8 +31,13 @@ public class MaskFactory : MonoBehaviour
                 yellowMask.GetComponent<Mask>().Column = column;
 
                 return yellowMask;
-            // case 'O':
-            //     break;
+            case 'O':
+                GameObject orangeMask = Instantiate(maskPrefab, new Vector2(column, -row), Quaternion.identity);
+                orangeMask.AddComponent<OrangeMask>();
+                orangeMask.GetComponent<Mask>().Row = row;
+                orangeMask.GetComponent<Mask>().Column = column;
+
+                return orangeMask;
             // case 'B':
             //     break;
             // case 'G':
