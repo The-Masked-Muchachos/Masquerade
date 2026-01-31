@@ -31,7 +31,13 @@ public class MaskFactory : MonoBehaviour
             //     break;
             // case 'P':
             //     break;
-            // case 'W':
+            case 'W':
+                GameObject weldingMask = Instantiate(maskPrefab, new Vector2(row, column), Quaternion.identity);
+                weldingMask.AddComponent<WeldingMask>();
+                weldingMask.GetComponent<WeldingMask>().Row = row;
+                weldingMask.GetComponent<WeldingMask>().Column = column;
+
+                return weldingMask.GetComponent<WeldingMask>();
             //     break;
             default:
                 break;
