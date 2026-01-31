@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-public class Board<T>
+public class Board
 {
     // All the masks currently on the board
-    private T[,] currentState;
+    private Mask[,] currentState;
 
     // Previous board states for undoing
-    private Stack<T[,]> pastStates;
+    private Stack<Mask[,]> pastStates;
 
     // Number of rows in the board
     public int NumberOfRows
@@ -21,7 +21,7 @@ public class Board<T>
     }
 
     // Gets the mask at a specified coordinate
-    public T this[int row, int column] {
+    public Mask this[int row, int column] {
         get => currentState[row, column];
     }
 
@@ -29,41 +29,41 @@ public class Board<T>
     public void Undo()
     {
 
-    };
+    }
 
     // Sets the value of a cell in the currentState
-    private void setMaskAt(int row, int column, T? mask)
+    private void setMaskAt(int row, int column, Mask? mask)
     {
 
-    };
+    }
 
     // Remove an existing mask from a cell
     public void RemoveMaskAt(int row, int column)
     {
 
-    };
+    }
 
     // Add a mask to an empty cell
-    public void AddMaskAt(int row, int column, T mask)
+    public void AddMaskAt(int row, int column, Mask mask)
     {
 
-    };
+    }
 
     // Change one mask into another
-    public void ReplaceMaskAt(int row, int column, T mask)
+    public void ReplaceMaskAt(int row, int column, Mask mask)
     {
 
-    };
+    }
 
     // Move mask from one cell to another
     public void MoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
     {
 
-    };
+    }
 
     // Swap two masks from different cells
     public void SwapMasksAt(int row1, int column1, int row2, int column2)
     {
 
-    };
+    }
 }
