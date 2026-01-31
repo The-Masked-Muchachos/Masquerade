@@ -13,7 +13,7 @@ public class Board<T>
     }
 
     // Number of columns in the board
-    public int NumberOfRows
+    public int NumberOfColumns
     {
         get => currentState.GetLength(1);
     }
