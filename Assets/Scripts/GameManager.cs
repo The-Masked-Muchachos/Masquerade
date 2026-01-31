@@ -26,22 +26,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private int currentLevel = 0;
+
     private void LoadLevel(int level)
     {
         Board.Instance.LoadFromTextAsset(layouts[level]);
-        
+        LevelManager.Instance.LoadLevelFromTextAsset(movesets[level]);
     }
 
     public void NextLevel()
     {
         Debug.Log("Going on to next level");
+        LoadLevel(++currentLevel);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Board.Instance.LoadFromTextAsset(layouts[6]);
-        LevelManager.Instance.LoadLevelFromTextAsset(movesets[6]);
+        LoadLevel(0);
     }
 
     // Update is called once per frame
