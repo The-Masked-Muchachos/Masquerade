@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class RedMask : Mask
 {
+    public override string ID
+    {
+        get => "R";
+    }
+
     public override void Activate(Board board)
     {
         Debug.Log("RedMask activated");

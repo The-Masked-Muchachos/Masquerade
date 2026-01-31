@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
+    [SerializeField]
+    private bool undo = false;
+
+    void OnValidate()
+    {
+        if (undo)
+        {
+            Undo();
+            undo = false;
+        }
+    }
+
     private static Board _instance;
     public static Board Instance
     {
@@ -31,7 +43,7 @@ public class Board : MonoBehaviour
     private GameObject[,] currentState;
 
     // Previous board states for undoing
-    private Stack<GameObject[,]> pastStates;
+    private Stack<string> pastStates;
 
     // Number of rows in the board
     public int NumberOfRows
@@ -66,7 +78,7 @@ public class Board : MonoBehaviour
         int rows = maskTypes.Count;
         int columns = maskTypes[0].Length;
 
-        pastStates = new Stack<GameObject[,]>();
+        pastStates = new Stack<string>();
         currentState = new GameObject[rows, columns];
 
         for (int row = 0; row < rows; row++)
@@ -78,10 +90,53 @@ public class Board : MonoBehaviour
         }
     }
 
+    // Saves the current state of the board before changes are made
+    public void SaveCurrentState()
+    {
+        string savedState = "";
+
+        for (int row = 0; row < NumberOfRows; row++)
+        {
+            for (int column = 0; column < NumberOfColumns; column++)
+            {
+                if (currentState[row, column] == null)
+                {
+                    savedState += '-';
+                    continue;
+                }
+                savedState += currentState[row, column].GetComponent<Mask>().ID;
+            }
+            savedState += '\n';
+        }
+
+        pastStates.Push(savedState);
+    }
+
     // Undoes to a previous board state
     public void Undo()
     {
+        if (pastStates.Count == 0) return;
 
+        string savedState = pastStates.Pop();
+
+        List<char[]> maskTypes = new List<char[]>();
+
+        foreach (string line in savedState.Split('\n'))
+        {
+            char[] cells = line.ToCharArray();
+            maskTypes.Add(cells);
+        }
+
+        for (int row = 0; row < NumberOfRows; row++)
+        {
+            for (int column = 0; column < NumberOfColumns; column++)
+            {
+                Destroy(currentState[row, column]);
+                currentState[row, column] = GetComponent<MaskFactory>().CreateMaskOfType(maskTypes[row][column], row, column);
+            }
+        }
+
+        LevelManager.Instance.LastMove();
     }
 
     // Checks if all masks have been cleared

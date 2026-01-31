@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class YellowMask : Mask
 {
+    public override string ID
+    {
+        get => "Y";
+    }
+
     public override void Activate(Board board)
     {
         Debug.Log("YellowMask activated");

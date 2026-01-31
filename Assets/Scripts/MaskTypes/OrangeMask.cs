@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class OrangeMask : Mask
 {
+    public override string ID
+    {
+        get => "O";
+    }
+    
     public override void Activate(Board board)
     {
         Debug.Log("OrangeMask activated");

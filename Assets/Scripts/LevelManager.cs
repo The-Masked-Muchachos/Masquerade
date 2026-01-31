@@ -25,16 +25,20 @@ public class LevelManager : MonoBehaviour
     }
 
     private List<MoveType> moves = new();
-    private int currentMove = 0;
+    private int? currentMove = 0;
 
-    public int CurrentMoveNumber
+    public int? CurrentMoveNumber
     {
         get => currentMove;
     }
 
-    public MoveType CurrentMoveType
+    public MoveType? CurrentMoveType
     {
-        get => moves[currentMove];
+        get
+        {
+            if (currentMove == null) return null;
+            return moves[(int)currentMove];
+        }
     }
 
     public enum MoveType
@@ -48,14 +52,14 @@ public class LevelManager : MonoBehaviour
     public void AddSwap(Mask mask)
     {
         masksToSwap.Add(mask);
-        
+
         if (masksToSwap.Count > 1)
         {
             Board.Instance.SetMaskAt(masksToSwap[0].Row, masksToSwap[0].Column, masksToSwap[1].gameObject);
             Board.Instance.SetMaskAt(masksToSwap[1].Row, masksToSwap[1].Column, masksToSwap[0].gameObject);
 
             Board.Instance.AnimateMoveMaskFromTo(masksToSwap[0].Row, masksToSwap[0].Column, masksToSwap[1].Row, masksToSwap[1].Column);
-            
+
             masksToSwap = new();
 
         }
@@ -82,13 +86,26 @@ public class LevelManager : MonoBehaviour
     public void NextMove()
     {
         currentMove++;
-        if (currentMove >= moves.Count)
+        if (Board.Instance.IsComplete())
         {
             GameManager.Instance.NextLevel();
-        } else
-        {
-            Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);
+            return;
         }
+
+        if (currentMove >= moves.Count)
+        {
+            currentMove = null;
+            Debug.Log("Out of moves!");
+            return;
+        }
+
+        Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);
+    }
+
+    public void LastMove()
+    {
+        currentMove--;
+        Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

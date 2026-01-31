@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class SilverMask : Mask
 {
-    // The mask's own row
+    public override string ID
+    {
+        get => "S";
+    }
     
     public override void Activate(Board board)
     {

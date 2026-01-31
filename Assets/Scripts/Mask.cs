@@ -5,6 +5,10 @@ using UnityEngine.UIElements;
 
 public abstract class Mask : MonoBehaviour
 {
+    public abstract string ID
+    {
+        get;
+    }
     private Camera cam;
     [NonSerialized]
     public int Row;
@@ -34,13 +38,17 @@ public abstract class Mask : MonoBehaviour
 
             if (LevelManager.Instance.CurrentMoveType == LevelManager.MoveType.Trigger)
             {
+                Board.Instance.SaveCurrentState();
+
                 Activate(Board.Instance);
                 LevelManager.Instance.NextMove();
+                return;
             }
 
-            else
+            if (LevelManager.Instance.CurrentMoveType == LevelManager.MoveType.Swap)
             {
                 LevelManager.Instance.AddSwap(this);
+                return;
             }
         }
     }

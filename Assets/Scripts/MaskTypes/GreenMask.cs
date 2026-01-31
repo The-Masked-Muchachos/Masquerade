@@ -1,11 +1,14 @@
 ﻿
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 public class GreenMask : Mask
 {
+    public override string ID
+    {
+        get => "G";
+    }
+    
     private int[,] rotations = new int[8,2] {{-1,1}, {0,1}, {1,1}, {1,0}, {1,-1}, {0,-1}, {-1,-1}, {-1,0}};
     public override void Activate(Board board)
     {
