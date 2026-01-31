@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         Board.Instance.LoadFromTextAsset(layouts[level]);
         LevelManager.Instance.LoadLevelFromTextAsset(movesets[level]);
+        GetComponent<CenterCamera>().Center();
     }
 
     public void NextLevel()
