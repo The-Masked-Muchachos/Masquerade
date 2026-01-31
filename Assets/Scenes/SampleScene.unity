@@ -504,6 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7234c81ce87ee4aa2804ce6a321cc13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Board
+  undo: 0
+  explosionPrefab: {fileID: 4835867202108755363, guid: 91f9af8d626f3486c84f0a884d4b78fd, type: 3}
 --- !u!4 &1809430709
 Transform:
   m_ObjectHideFlags: 0

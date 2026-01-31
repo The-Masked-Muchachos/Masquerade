@@ -188,9 +188,11 @@ public class Board : MonoBehaviour
     // Swap two masks from different cells
     public void AnimateSwapMasksAt(int row1, int column1, int row2, int column2)
     {
-        GameObject originalMask = currentState[row1, column1];
-        GameObject otherMask = currentState[row2, column2];
+        Mask mask1 = currentState[row1, column1].GetComponent<Mask>();
+        Mask mask2 = currentState[row2, column2].GetComponent<Mask>();
 
         //TODO: Animation
+        mask1.gameObject.transform.position = new Vector2(mask1.Column, -mask1.Row);
+        mask2.gameObject.transform.position = new Vector2(mask2.Column, -mask2.Row);
     }
 }

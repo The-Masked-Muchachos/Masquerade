@@ -40,8 +40,8 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Board.Instance.LoadFromTextAsset(layouts[1]);
-        LevelManager.Instance.LoadLevelFromTextAsset(movesets[1]);
+        Board.Instance.LoadFromTextAsset(layouts[6]);
+        LevelManager.Instance.LoadLevelFromTextAsset(movesets[6]);
     }
 
     // Update is called once per frame

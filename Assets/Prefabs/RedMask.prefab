@@ -93,3 +93,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7497a57e4e4a789b569d226dffa88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedMask
+  explosionPrefab: {fileID: 4835867202108755363, guid: 91f9af8d626f3486c84f0a884d4b78fd, type: 3}

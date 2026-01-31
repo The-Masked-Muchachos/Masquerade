@@ -53,15 +53,30 @@ public class LevelManager : MonoBehaviour
     {
         masksToSwap.Add(mask);
 
+        Debug.Log("Added mask to swap");
+
         if (masksToSwap.Count > 1)
         {
+            Board.Instance.SaveCurrentState();
+            
+            int mask0OldRow = masksToSwap[0].Row;
+            int mask0OldColumn = masksToSwap[0].Column;
+            int mask1OldRow = masksToSwap[1].Row;
+            int mask1OldColumn = masksToSwap[1].Column;
+
             Board.Instance.SetMaskAt(masksToSwap[0].Row, masksToSwap[0].Column, masksToSwap[1].gameObject);
             Board.Instance.SetMaskAt(masksToSwap[1].Row, masksToSwap[1].Column, masksToSwap[0].gameObject);
 
-            Board.Instance.AnimateMoveMaskFromTo(masksToSwap[0].Row, masksToSwap[0].Column, masksToSwap[1].Row, masksToSwap[1].Column);
+            masksToSwap[0].Row = mask1OldRow;
+            masksToSwap[0].Column = mask1OldColumn;
+            masksToSwap[1].Row = mask0OldRow;
+            masksToSwap[1].Column = mask0OldColumn;
+
+            Board.Instance.AnimateSwapMasksAt(masksToSwap[0].Row, masksToSwap[0].Column, masksToSwap[1].Row, masksToSwap[1].Column);
 
             masksToSwap = new();
 
+            NextMove();
         }
     }
 

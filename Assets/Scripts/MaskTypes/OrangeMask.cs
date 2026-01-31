@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class OrangeMask : Mask
 {
+    // Explosion to play when a mask is destroyed
+    [SerializeField]
+    private GameObject explosionPrefab;
+
     public override string ID
     {
         get => "O";
@@ -19,6 +23,8 @@ public class OrangeMask : Mask
     private IEnumerator ActivateAfterDelay(Board board)
     {
         yield return new WaitForSeconds(0.2f);
+
+        Instantiate(explosionPrefab, new Vector2(Column, -Row), Quaternion.identity);
 
         List<GameObject> adjacentCells = new List<GameObject>();
         if (Column > 0) adjacentCells.Add(board[Row, Column - 1]);
