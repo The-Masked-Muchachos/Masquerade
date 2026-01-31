@@ -140,6 +140,8 @@ public class LevelManager : MonoBehaviour
 
     public void LastMove()
     {
+        if (currentMove == null) currentMove = moves.Count;
+
         currentMove--;
         Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);
     }
