@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MaskFactory
 {
-    static Mask CreateMaskOfType(char type)
+    public static Mask CreateMaskOfType(char type)
     {
         // TODO add mask subclasses
         switch(type)
