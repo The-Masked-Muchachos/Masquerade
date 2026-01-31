@@ -1,8 +1,33 @@
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
-public class Board
+public class Board : MonoBehaviour
 {
+    private static Board _instance;
+    public static Board Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<Board>();
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject(typeof(Board).ToString());
+                    _instance = singleton.AddComponent<Board>();
+                    DontDestroyOnLoad(singleton);
+                }
+            }
+            return _instance;
+        }
+    }
+
+    void Start()
+    {
+        LoadFromPlaintext("Assets/Levels/temp.txt");
+    }
+
     // All the masks currently on the board
     private Mask[,] currentState;
 
@@ -22,43 +47,39 @@ public class Board
     }
 
     // Gets the mask at a specified coordinate
-    public Mask this[int row, int column] {
+    public Mask this[int row, int column]
+    {
         get => currentState[row, column];
         private set => currentState[row, column] = value;
     }
 
-    // Creates a new empty board
-    private Board(int rows, int columns) {
-        pastStates = new Stack<Mask[,]>();
-        currentState = new Mask[rows, columns];
-    }
-
     // Creates a new board using a file
-    public static Board FromPlaintext(string filename)
+    private void LoadFromPlaintext(string filename)
     {
         using (var reader = new StreamReader(filename))
         {
-            List<char[]> masks = new List<char[]>();
+            List<char[]> maskTypes = new List<char[]>();
 
             string line;
             while ((line = reader.ReadLine()) != null)
             {
                 char[] cells = line.ToCharArray();
-                masks.Add(cells);
+                maskTypes.Add(cells);
             }
 
-            int rows = masks.Count;
-            int columns = masks[0].Length;
+            int rows = maskTypes.Count;
+            int columns = maskTypes[0].Length;
 
-            Board board = new Board(rows, columns);
-            for(int row = 0; row < rows; row++) {
-                for(int column = 0; column < columns; column++)
+            pastStates = new Stack<Mask[,]>();
+            currentState = new Mask[rows, columns];
+
+            for (int row = 0; row < rows; row++)
+            {
+                for (int column = 0; column < columns; column++)
                 {
-                    board[row, column] = MaskFactory.CreateMaskOfType(masks[row][column], row, column);
+                    currentState[row, column] = GetComponent<MaskFactory>().CreateMaskOfType(maskTypes[row][column], row, column);
                 }
             }
-
-            return board;
         }
     }
 
@@ -78,7 +99,7 @@ public class Board
     public void RemoveMaskAt(int row, int column)
     {
         setMaskAt(row, column, null);
-        
+
         //TODO: Play remove mask animation
     }
 
@@ -86,7 +107,7 @@ public class Board
     public void AddMaskAt(int row, int column, Mask mask)
     {
         setMaskAt(row, column, mask);
-        
+
         //TODO: Play mask on animation
     }
 
@@ -94,7 +115,7 @@ public class Board
     public void ReplaceMaskAt(int row, int column, Mask mask)
     {
         setMaskAt(row, column, mask);
-        
+
         //TODO: Play new mask on animation
     }
 
@@ -102,12 +123,12 @@ public class Board
     public void MoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
     {
         Mask originalMask = currentState[fromRow, fromColumn];
-        
+
         setMaskAt(fromRow, fromColumn, null);
         setMaskAt(toRow, toColumn, originalMask);
-        
+
         //TODO: Animation
-        
+
     }
 
     // Swap two masks from different cells
@@ -115,10 +136,10 @@ public class Board
     {
         Mask originalMask = currentState[row1, column1];
         Mask otherMask = currentState[row2, column2];
-        
+
         setMaskAt(row1, column1, otherMask);
         setMaskAt(row2, column2, originalMask);
-        
+
         //TODO: Animation
     }
 }

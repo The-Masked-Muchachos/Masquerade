@@ -1,14 +1,22 @@
 using UnityEngine;
 
-public class MaskFactory
+public class MaskFactory : MonoBehaviour
 {
-    public static Mask CreateMaskOfType(char type, int row, int column)
+    [SerializeField]
+    private GameObject maskPrefab;
+
+    public Mask CreateMaskOfType(char type, int row, int column)
     {
         // TODO add mask subclasses
         switch(type)
         {
             case 'S':
-                return new SilverMask(row, column);
+                GameObject silverMask = Instantiate(maskPrefab, new Vector2(row, column), Quaternion.identity);
+                silverMask.AddComponent<SilverMask>();
+                silverMask.GetComponent<SilverMask>().Row = row;
+                silverMask.GetComponent<SilverMask>().Column = column;
+
+                return silverMask.GetComponent<SilverMask>();
             // case 'R':
             //     break;
             // case 'Y':
