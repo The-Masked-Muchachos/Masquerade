@@ -11,21 +11,21 @@ public class MaskFactory : MonoBehaviour
         switch(type)
         {
             case 'S':
-                GameObject silverMask = Instantiate(maskPrefab, new Vector2(column, row), Quaternion.identity);
+                GameObject silverMask = Instantiate(maskPrefab, new Vector2(column, -row), Quaternion.identity);
                 silverMask.AddComponent<SilverMask>();
                 silverMask.GetComponent<Mask>().Row = row;
                 silverMask.GetComponent<Mask>().Column = column;
 
                 return silverMask;
             case 'R':
-                GameObject redMask = Instantiate(maskPrefab, new Vector2(column, row), Quaternion.identity);
+                GameObject redMask = Instantiate(maskPrefab, new Vector2(column, -row), Quaternion.identity);
                 redMask.AddComponent<RedMask>();
                 redMask.GetComponent<Mask>().Row = row;
                 redMask.GetComponent<Mask>().Column = column;
 
                 return redMask;
             case 'Y':
-                GameObject yellowMask = Instantiate(maskPrefab, new Vector2(column, row), Quaternion.identity);
+                GameObject yellowMask = Instantiate(maskPrefab, new Vector2(column, -row), Quaternion.identity);
                 yellowMask.AddComponent<YellowMask>();
                 yellowMask.GetComponent<Mask>().Row = row;
                 yellowMask.GetComponent<Mask>().Column = column;
@@ -42,7 +42,7 @@ public class MaskFactory : MonoBehaviour
             // case 'P':
             //     break;
             case 'W':
-                GameObject weldingMask = Instantiate(maskPrefab, new Vector2(column, row), Quaternion.identity);
+                GameObject weldingMask = Instantiate(maskPrefab, new Vector2(column, -row), Quaternion.identity);
                 weldingMask.AddComponent<WeldingMask>();
                 weldingMask.GetComponent<Mask>().Row = row;
                 weldingMask.GetComponent<Mask>().Column = column;
