@@ -181,6 +181,8 @@ public class Board : MonoBehaviour
     // Move mask from one cell to another
     public void AnimateMoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
     {
+        GetComponent<AudioSource>().Play();
+
         GameObject mask = currentState[toRow, toColumn];
         if (mask == null) return;
 
