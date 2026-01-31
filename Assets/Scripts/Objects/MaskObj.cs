@@ -5,10 +5,10 @@ using UnityEngine.UIElements;
 
 public class MaskObj : MonoBehaviour
 {
-    [SerializeField] private Mask mask;
+    public Mask Mask;
 
     public void OnClick()
     {
-        mask.Activate(BoardObj.Instance.board);
+        Mask.Activate(BoardObj.Instance.board);
     }
 }
