@@ -28,5 +28,7 @@ public class MaskFactory
             default:
                 break;
         }
+
+        return null;
     }
 }
