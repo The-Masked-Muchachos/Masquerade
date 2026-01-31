@@ -1,6 +1,7 @@
--GY--
--RYYR
-GRYRR
---RRR
--RRSR
-YRRYY
+------
+--GY--
+--RYYR
+-GRYRR
+---RRR
+--RRSR
+-YRRYY
