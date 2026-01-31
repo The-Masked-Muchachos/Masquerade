@@ -197,7 +197,7 @@ public class Board : MonoBehaviour
             mask.transform.position = to;
         }
 
-        StartCoroutine(GlideToPosition(mask, mask.transform.position, new Vector2(mask.GetComponent<Mask>().Column, --mask.GetComponent<Mask>().Row)));
+        StartCoroutine(GlideToPosition(mask, mask.transform.position, new Vector2(mask.GetComponent<Mask>().Column, -mask.GetComponent<Mask>().Row)));
     }
 
     // Swap two masks from different cells
