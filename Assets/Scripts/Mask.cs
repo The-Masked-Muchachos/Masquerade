@@ -1,5 +1,3 @@
-using System.Reflection.Metadata;
-
 public abstract class Mask(int row, int column)
 {
     // The mask's own row
@@ -9,5 +7,5 @@ public abstract class Mask(int row, int column)
     private int column = column;
 
     // Activates the masks's special function
-    public abstract void Activate(Mask[,] board);
+    public abstract void Activate(Board<Mask> board);
 }
