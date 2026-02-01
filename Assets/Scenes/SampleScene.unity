@@ -1591,6 +1591,7 @@ GameObject:
   - component: {fileID: 1809430708}
   - component: {fileID: 1809430707}
   - component: {fileID: 1809430710}
+  - component: {fileID: 1809430711}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -1657,7 +1658,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 132af5928e09840feb61569fa5ce47e5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1741,6 +1742,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1809430711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809430706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7ff36b5cea7484b8c79b829a683bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundLibrary
+  Crack: {fileID: 8300000, guid: 1c36d04d2846b4e30942d2012e6b716f, type: 3}
+  Fwip: {fileID: 8300000, guid: 132af5928e09840feb61569fa5ce47e5, type: 3}
 --- !u!1 &2001477213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
