@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private GameObject gridTilePrefab;
-    private List<GameObject> gridTiles = new();
+    private GameObject[,] gridTiles = new GameObject[0, 0];
     private List<MoveType> moves = new();
     private int? currentMove = 0;
 
@@ -117,15 +117,25 @@ public class LevelManager : MonoBehaviour
             Destroy(tile);
         }
 
-        gridTiles = new();
+        gridTiles = new GameObject[Board.Instance.NumberOfRows, Board.Instance.NumberOfColumns];
 
         for (int row = 0; row < Board.Instance.NumberOfRows; row++)
         {
             for (int column = 0; column < Board.Instance.NumberOfColumns; column++)
             {
-                gridTiles.Add(Instantiate(gridTilePrefab, new Vector2(column, -row), Quaternion.identity));
+                gridTiles[row, column] = Instantiate(gridTilePrefab, new Vector2(column, -row), Quaternion.identity);
             }
         }
+    }
+
+    public void HoverOverGridTileAt(int row, int column)
+    {
+        foreach (GameObject tile in gridTiles)
+        {
+            tile.GetComponent<GridTileChangeColor>().GoWhite();
+        }
+
+        gridTiles[row, column].GetComponent<GridTileChangeColor>().GoYellow();
     }
 
     public void MoveInProgress()

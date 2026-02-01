@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6992983888054597873}
   - component: {fileID: 6212026515979331004}
+  - component: {fileID: 383057850787730364}
   m_Layer: 0
   m_Name: GridTile
   m_TagString: Untagged
@@ -91,3 +92,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &383057850787730364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566558295441689746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f568e1d3c6568443c8c43c4ca6105f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridTileChangeColor
