@@ -1,40 +1,37 @@
 fileFormatVersion: 2
-guid: 186fd3173cc3f496a8327159c98da878
+guid: 42d75ee778d2849a1893fbd65d86c96e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1810165398548191219
-    second: level_8_0
+      213: 5711218531144585904
+    second: level_7_0
   - first:
-      213: -7383744085432343435
-    second: level_8_1
+      213: -3942903620041077507
+    second: level_7_1
   - first:
-      213: -1436554319240638374
-    second: level_8_2
+      213: -1003787345636952308
+    second: level_7_2
   - first:
-      213: 3106483834096935424
-    second: level_8_3
+      213: -1320092080922400096
+    second: level_7_3
   - first:
-      213: -1818269022143992732
-    second: level_8_4
+      213: 7176000871645000763
+    second: level_7_4
   - first:
-      213: -3021927690285654600
-    second: level_8_5
+      213: 550043951247653320
+    second: level_7_5
   - first:
-      213: 7238465027011595007
-    second: level_8_6
+      213: 787444656663285974
+    second: level_7_6
   - first:
-      213: 7660090001904587620
-    second: level_8_7
+      213: 6176408940023798744
+    second: level_7_7
   - first:
-      213: -1938990013639315101
-    second: level_8_8
+      213: -1997148127603614791
+    second: level_7_8
   - first:
-      213: -1935165965617570988
-    second: level_8_9
-  - first:
-      213: 3983869112801846972
-    second: level_8_10
+      213: 3161127209311573533
+    second: level_7_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,10 +140,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level_8_0
+      name: level_7_0
       rect:
         serializedVersion: 2
-        x: 60
+        x: 67
         y: 24
         width: 39
         height: 67
@@ -158,17 +155,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d08e4d2292001e6e0800000000000000
-      internalID: -1810165398548191219
+      spriteID: 0b25087aef2524f40800000000000000
+      internalID: 5711218531144585904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_1
+      name: level_7_1
       rect:
         serializedVersion: 2
-        x: 97
+        x: 104
         y: 38
         width: 24
         height: 38
@@ -180,17 +177,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 574e96300eba78990800000000000000
-      internalID: -7383744085432343435
+      spriteID: dfc89d74c0ef749c0800000000000000
+      internalID: -3942903620041077507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_2
+      name: level_7_2
       rect:
         serializedVersion: 2
-        x: 123
+        x: 130
         y: 39
         width: 18
         height: 48
@@ -202,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a50db153575501ce0800000000000000
-      internalID: -1436554319240638374
+      spriteID: c07f6493ab4d112f0800000000000000
+      internalID: -1003787345636952308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_3
+      name: level_7_3
       rect:
         serializedVersion: 2
-        x: 153
+        x: 161
         y: 29
-        width: 33
-        height: 60
+        width: 32
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,17 +221,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00267d796927c1b20800000000000000
-      internalID: 3106483834096935424
+      spriteID: 0aa60dd1f371eade0800000000000000
+      internalID: -1320092080922400096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_4
+      name: level_7_4
       rect:
         serializedVersion: 2
-        x: 188
+        x: 194
         y: 58
         width: 11
         height: 11
@@ -246,19 +243,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46ca20d35f534c6e0800000000000000
-      internalID: -1818269022143992732
+      spriteID: b343b4ec5c6469360800000000000000
+      internalID: 7176000871645000763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_5
+      name: level_7_5
       rect:
         serializedVersion: 2
-        x: 217
+        x: 223
         y: 26
-        width: 60
+        width: 49
         height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,41 +265,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bd5b9bc6c4ff06d0800000000000000
-      internalID: -3021927690285654600
+      spriteID: 8c9f7f43f0622a700800000000000000
+      internalID: 550043951247653320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_6
+      name: level_7_6
       rect:
         serializedVersion: 2
-        x: 274
-        y: 37
-        width: 56
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ffa4d1e4791347460800000000000000
-      internalID: 7238465027011595007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_8_7
-      rect:
-        serializedVersion: 2
-        x: 333
+        x: 273
         y: 9
-        width: 49
+        width: 56
         height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4635b07954b1e4a60800000000000000
-      internalID: 7660090001904587620
+      spriteID: 6d0d1b04eb09dea00800000000000000
+      internalID: 787444656663285974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_8
+      name: level_7_7
       rect:
         serializedVersion: 2
-        x: 383
+        x: 330
         y: 38
-        width: 25
-        height: 37
+        width: 40
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 361bff51bd25715e0800000000000000
-      internalID: -1938990013639315101
+      spriteID: 8db5aa9f43307b550800000000000000
+      internalID: 6176408940023798744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_9
+      name: level_7_8
       rect:
         serializedVersion: 2
-        x: 406
-        y: 38
-        width: 31
-        height: 37
+        x: 371
+        y: 39
+        width: 61
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,17 +331,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45b50f5aec8e425e0800000000000000
-      internalID: -1935165965617570988
+      spriteID: 9bb995afb54b844e0800000000000000
+      internalID: -1997148127603614791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_8_10
+      name: level_7_9
       rect:
         serializedVersion: 2
-        x: 188
+        x: 194
         y: 34
         width: 11
         height: 11
@@ -378,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb66434c9db894730800000000000000
-      internalID: 3983869112801846972
+      spriteID: d1696d0d2749edb20800000000000000
+      internalID: 3161127209311573533
       vertices: []
       indices: 
       edges: []
@@ -398,17 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      level_8_0: -1810165398548191219
-      level_8_1: -7383744085432343435
-      level_8_10: 3983869112801846972
-      level_8_2: -1436554319240638374
-      level_8_3: 3106483834096935424
-      level_8_4: -1818269022143992732
-      level_8_5: -3021927690285654600
-      level_8_6: 7238465027011595007
-      level_8_7: 7660090001904587620
-      level_8_8: -1938990013639315101
-      level_8_9: -1935165965617570988
+      level_7_0: 5711218531144585904
+      level_7_1: -3942903620041077507
+      level_7_2: -1003787345636952308
+      level_7_3: -1320092080922400096
+      level_7_4: 7176000871645000763
+      level_7_5: 550043951247653320
+      level_7_6: 787444656663285974
+      level_7_7: 6176408940023798744
+      level_7_8: -1997148127603614791
+      level_7_9: 3161127209311573533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
