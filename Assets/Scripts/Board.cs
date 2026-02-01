@@ -199,7 +199,7 @@ public class Board : MonoBehaviour
             mask.transform.position = from;
             Vector2 displacement = to - from;
 
-            for (float i = 0; i < 1; i += 0.01f)
+            for (float i = 0; i < 1; i += 0.05f)
             {
                 mask.transform.position = from + displacement * i;
                 yield return null;
