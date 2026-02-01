@@ -9,6 +9,6 @@ public class GridTileChangeColor : MonoBehaviour
 
     public void GoWhite()
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<SpriteRenderer>().color = Color.gray;
     }
 }
