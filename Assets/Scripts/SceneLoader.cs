@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,12 @@ public class SceneLoader: MonoBehaviour
 
     public void ChangeScene()
     {
+        StartCoroutine(ChangeSceneAfterDelay());
+    }
+
+    private IEnumerator ChangeSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
