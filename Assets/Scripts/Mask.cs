@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public abstract class Mask : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public abstract class Mask : MonoBehaviour
     public int Column;
 
     private bool hovering;
+    private IEnumerator lastHover;
 
     public void OnClick()
     {
@@ -31,10 +31,12 @@ public abstract class Mask : MonoBehaviour
     private void Update()
     {
         transform.rotation = Quaternion.identity;
+        transform.localScale = Vector3.one;
 
         if (hovering)
         {
-            transform.Rotate(new Vector3(0, 0, Mathf.Cos(Time.time * 20) * 5f));
+            transform.Rotate(new Vector3(0, 0, Mathf.Cos(Time.time * 20) * 10f));
+            transform.localScale = Vector3.one * Mathf.Cos(Time.time * 20) * 0.2f + Vector3.one;
         }
         float mouseX = Mouse.current.position.x.ReadValue();
         float mouseY = Mouse.current.position.y.ReadValue();
@@ -44,9 +46,12 @@ public abstract class Mask : MonoBehaviour
         if (hit.collider && (hit.collider.gameObject.GetInstanceID() == this.gameObject.GetInstanceID()))
         {
             LevelManager.Instance.HoverOverGridTileAt(Row, Column);
-            Hover();
 
-            if (!Mouse.current.leftButton.wasPressedThisFrame) return;
+            if (!Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                Hover();
+                return;
+            }
             Debug.Log(hit.collider.gameObject.GetInstanceID());
 
             if (LevelManager.Instance.CurrentMoveType == LevelManager.MoveType.Trigger)
@@ -68,8 +73,12 @@ public abstract class Mask : MonoBehaviour
 
     private void Hover()
     {
-        StopCoroutine(StopHoveringAfterDelay());
-        StartCoroutine(StopHoveringAfterDelay());
+        if (lastHover != null)
+        {
+            StopCoroutine(lastHover);
+        }
+        lastHover = StopHoveringAfterDelay();
+        StartCoroutine(lastHover);
     }
 
     public IEnumerator StopHoveringAfterDelay()
