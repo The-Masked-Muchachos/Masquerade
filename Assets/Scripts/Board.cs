@@ -68,8 +68,6 @@ public class Board : MonoBehaviour
     // Creates a new board using a file
     public void LoadFromTextAsset(TextAsset textAsset)
     {
-
-
         foreach (GameObject mask in currentState)
         {
             if (mask == null) continue;

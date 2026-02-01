@@ -93,3 +93,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb5d538944b145d0965179566d415e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SilverMask
+  dustsplosionPrefab: {fileID: 4835867202108755363, guid: 8ceffa491e4e343978031c1141778f8b, type: 3}

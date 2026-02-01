@@ -35,7 +35,7 @@ public abstract class Mask : MonoBehaviour
 
         if (hovering)
         {
-            transform.Rotate(new Vector3(0, 0, Mathf.Cos(Time.time * 20) * 10f));
+            transform.Rotate(new Vector3(0, 0, Mathf.Cos(Time.time * 20) * 15f));
             transform.localScale = Vector3.one * Mathf.Cos(Time.time * 20) * 0.2f + Vector3.one;
         }
         float mouseX = Mouse.current.position.x.ReadValue();

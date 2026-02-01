@@ -7,6 +7,9 @@ public class RedMask : Mask
     // Explosion to play when a mask is destroyed
     [SerializeField]
     private GameObject explosionPrefab;
+    [SerializeField]
+    private GameObject dustsplosionPrefab;
+
 
     public override string ID
     {
@@ -46,6 +49,11 @@ public class RedMask : Mask
             }
             else
             {
+                if (cell.GetComponent<SilverMask>() != null)
+                {
+                    Instantiate(dustsplosionPrefab, new Vector2(cell.GetComponent<Mask>().Column, -cell.GetComponent<Mask>().Row), Quaternion.identity);
+                }
+
                 board.SetMaskAt(cell.GetComponent<Mask>().Row, cell.GetComponent<Mask>().Column, null);
                 Destroy(cell);
             }

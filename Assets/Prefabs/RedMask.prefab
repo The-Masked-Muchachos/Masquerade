@@ -94,3 +94,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedMask
   explosionPrefab: {fileID: 4835867202108755363, guid: 91f9af8d626f3486c84f0a884d4b78fd, type: 3}
+  dustsplosionPrefab: {fileID: 4835867202108755363, guid: 8ceffa491e4e343978031c1141778f8b, type: 3}
