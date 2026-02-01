@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27c7183ae44a54f3598f9322aa43069f
+guid: bf1411a904fad409489ba0f52053c5a6
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -29,6 +29,12 @@ TextureImporter:
   - first:
       213: -199294115982268587
     second: level_3_8
+  - first:
+      213: 4127279589329964178
+    second: level_3_9
+  - first:
+      213: -6118448719977364278
+    second: level_3_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -140,7 +146,7 @@ TextureImporter:
       name: level_3_0
       rect:
         serializedVersion: 2
-        x: 112
+        x: 58
         y: 16
         width: 39
         height: 67
@@ -162,10 +168,10 @@ TextureImporter:
       name: level_3_1
       rect:
         serializedVersion: 2
-        x: 149
-        y: 30
-        width: 24
-        height: 38
+        x: 121
+        y: 31
+        width: 18
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +190,10 @@ TextureImporter:
       name: level_3_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 31
-        width: 18
-        height: 48
+        x: 151
+        y: 22
+        width: 35
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +212,10 @@ TextureImporter:
       name: level_3_3
       rect:
         serializedVersion: 2
-        x: 205
-        y: 22
-        width: 35
-        height: 60
+        x: 217
+        y: 18
+        width: 49
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +234,10 @@ TextureImporter:
       name: level_3_4
       rect:
         serializedVersion: 2
-        x: 242
-        y: 50
+        x: 266
+        y: 69
         width: 11
-        height: 11
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +256,10 @@ TextureImporter:
       name: level_3_5
       rect:
         serializedVersion: 2
-        x: 271
-        y: 18
-        width: 38
-        height: 65
+        x: 335
+        y: 30
+        width: 106
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +278,10 @@ TextureImporter:
       name: level_3_6
       rect:
         serializedVersion: 2
-        x: 308
+        x: 95
         y: 30
-        width: 52
-        height: 37
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +300,10 @@ TextureImporter:
       name: level_3_7
       rect:
         serializedVersion: 2
-        x: 361
-        y: 30
-        width: 25
-        height: 37
+        x: 188
+        y: 50
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,7 +322,51 @@ TextureImporter:
       name: level_3_8
       rect:
         serializedVersion: 2
-        x: 242
+        x: 266
+        y: 30
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5572d03be07fb3df0800000000000000
+      internalID: -199294115982268587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_3_9
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 30
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c8bb25bea074930800000000000000
+      internalID: 4127279589329964178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_3_10
+      rect:
+        serializedVersion: 2
+        x: 188
         y: 26
         width: 11
         height: 11
@@ -328,8 +378,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5572d03be07fb3df0800000000000000
-      internalID: -199294115982268587
+      spriteID: ac44e4d5e47e61ba0800000000000000
+      internalID: -6118448719977364278
       vertices: []
       indices: 
       edges: []
@@ -350,6 +400,7 @@ TextureImporter:
     nameFileIdTable:
       level_3_0: 1248069561367767136
       level_3_1: -5587797496040920184
+      level_3_10: -6118448719977364278
       level_3_2: -7397473143875487808
       level_3_3: 8598185360849892352
       level_3_4: -1928174345084182673
@@ -357,6 +408,7 @@ TextureImporter:
       level_3_6: -6279213970760780687
       level_3_7: -2245362455189821914
       level_3_8: -199294115982268587
+      level_3_9: 4127279589329964178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
