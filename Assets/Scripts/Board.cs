@@ -125,6 +125,7 @@ public class Board : MonoBehaviour
     // Undoes to a previous board state
     public void Undo()
     {
+        Board.Instance.ResetViewMode();
         if (pastStates.Count == 0) return;
         
         GameManager.Instance.HideRestartButton();

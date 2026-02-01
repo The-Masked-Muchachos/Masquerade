@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("Going on to next level");
+        Board.Instance.ResetViewMode();
         if (currentLevel + 1 > layouts.Length - 1)
         {
             SceneManager.LoadScene("Victory");
