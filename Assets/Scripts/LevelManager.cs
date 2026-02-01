@@ -25,6 +25,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private GameObject gridTilePrefab;
+    private List<GameObject> gridTiles = new();
     private List<MoveType> moves = new();
     private int? currentMove = 0;
 
@@ -104,6 +107,24 @@ public class LevelManager : MonoBehaviour
         if (Board.Instance.IsComplete())
         {
             GameManager.Instance.NextLevel();
+        }
+    }
+    
+    public void DrawGridTiles()
+    {
+        foreach (GameObject tile in gridTiles)
+        {
+            Destroy(tile);
+        }
+
+        gridTiles = new();
+
+        for (int row = 0; row < Board.Instance.NumberOfRows; row++)
+        {
+            for (int column = 0; column < Board.Instance.NumberOfColumns; column++)
+            {
+                gridTiles.Add(Instantiate(gridTilePrefab, new Vector2(column, -row), Quaternion.identity));
+            }
         }
     }
 

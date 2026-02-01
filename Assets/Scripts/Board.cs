@@ -161,7 +161,6 @@ public class Board : MonoBehaviour
     public void AnimateRemoveMaskAt(int row, int column)
     {
         //TODO: Play remove mask animation
-        GetComponent<AudioSource>().Play();
     }
 
     // Add a mask to an empty cell
