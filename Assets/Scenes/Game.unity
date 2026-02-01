@@ -292,7 +292,7 @@ PrefabInstance:
     - target: {fileID: 465563359989623449, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6554736390298987251, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
     - target: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Name
       value: Cursor 6
@@ -323,11 +323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 27c7183ae44a54f3598f9322aa43069f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf1411a904fad409489ba0f52053c5a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 465563359989623449, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6554736390298987251, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
     - target: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Name
       value: Cursor 3
@@ -499,11 +499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8079627a94d654a4daa3db5978ad8a89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42d75ee778d2849a1893fbd65d86c96e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c9e909479864b4d5b8329d18c6a7c265, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7e2ff62406e24092881bb2f9b2304b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -986,7 +986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a29bbdd19297c4407b8cbf9e54d31bf9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b5728e8b08d040e58ef72d31b8c56dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1016,6 +1016,7 @@ GameObject:
   - component: {fileID: 700286129}
   - component: {fileID: 700286131}
   - component: {fileID: 700286132}
+  - component: {fileID: 700286133}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1099,6 +1100,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   gridTilePrefab: {fileID: 566558295441689746, guid: 45b65748c3dd24665b87ff31fee6b3ea, type: 3}
   movesLeftDisplay: {fileID: 1712046857}
+--- !u!82 &700286133
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700286128}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: f265c2bcba75140ddbb6ab1e84d4d251, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &700845576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
@@ -1120,7 +1218,7 @@ PrefabInstance:
     - target: {fileID: 465563359989623449, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6554736390298987251, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
     - target: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Name
       value: Cursor 4
@@ -1151,11 +1249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1221,7 +1319,7 @@ PrefabInstance:
     - target: {fileID: 465563359989623449, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6554736390298987251, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
     - target: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Name
       value: Cursor 1
@@ -1252,11 +1350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1443,7 +1541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 687f1e85303414f73a11480f35b48936, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 186fd3173cc3f496a8327159c98da878, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1604,7 +1702,7 @@ PrefabInstance:
     - target: {fileID: 465563359989623449, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6554736390298987251, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
     - target: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Name
       value: Cursor 5
@@ -1635,11 +1733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1794,7 +1892,7 @@ PrefabInstance:
     - target: {fileID: 465563359989623449, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6554736390298987251, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
+      objectReference: {fileID: 21300000, guid: 32ec00a0c174e431db713b2092cb1969, type: 3}
     - target: {fileID: 6999505552134424619, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_Name
       value: Cursor 2
@@ -1825,11 +1923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9151283979942470524, guid: 00378b178438440c6ba76a473b0d19d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2505,7 +2603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7941b2e2fca0e4dff92bb64a2c49bb26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b09584d7e36f44233b612c85176dfbe2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2665,7 +2763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1d5238d3148c94a0480a7dea01c0e4ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 271d5131115f642108e5ec873b79bc68, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

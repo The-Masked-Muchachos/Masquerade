@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c9e909479864b4d5b8329d18c6a7c265
+guid: b7e2ff62406e24092881bb2f9b2304b8
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -32,6 +32,9 @@ TextureImporter:
   - first:
       213: 429656571819910018
     second: level_6_9
+  - first:
+      213: 6520395823840346361
+    second: level_6_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -143,7 +146,7 @@ TextureImporter:
       name: level_6_0
       rect:
         serializedVersion: 2
-        x: 66
+        x: 56
         y: 24
         width: 39
         height: 67
@@ -165,10 +168,10 @@ TextureImporter:
       name: level_6_1
       rect:
         serializedVersion: 2
-        x: 103
-        y: 38
-        width: 24
-        height: 38
+        x: 119
+        y: 39
+        width: 18
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +190,10 @@ TextureImporter:
       name: level_6_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 39
-        width: 18
-        height: 48
+        x: 150
+        y: 29
+        width: 33
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +212,10 @@ TextureImporter:
       name: level_6_3
       rect:
         serializedVersion: 2
-        x: 160
-        y: 29
-        width: 33
-        height: 60
+        x: 213
+        y: 27
+        width: 39
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +234,10 @@ TextureImporter:
       name: level_6_4
       rect:
         serializedVersion: 2
-        x: 194
-        y: 58
-        width: 11
-        height: 11
+        x: 338
+        y: 8
+        width: 100
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +256,10 @@ TextureImporter:
       name: level_6_5
       rect:
         serializedVersion: 2
-        x: 224
-        y: 26
-        width: 49
-        height: 65
+        x: 365
+        y: 77
+        width: 11
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +278,10 @@ TextureImporter:
       name: level_6_6
       rect:
         serializedVersion: 2
-        x: 274
-        y: 9
-        width: 56
-        height: 66
+        x: 93
+        y: 38
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +300,10 @@ TextureImporter:
       name: level_6_7
       rect:
         serializedVersion: 2
-        x: 331
-        y: 38
-        width: 39
-        height: 49
+        x: 184
+        y: 58
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +322,10 @@ TextureImporter:
       name: level_6_8
       rect:
         serializedVersion: 2
-        x: 371
-        y: 39
+        x: 249
+        y: 37
         width: 62
-        height: 48
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,7 +344,29 @@ TextureImporter:
       name: level_6_9
       rect:
         serializedVersion: 2
-        x: 194
+        x: 313
+        y: 38
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283ecba206276f500800000000000000
+      internalID: 429656571819910018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_6_10
+      rect:
+        serializedVersion: 2
+        x: 184
         y: 34
         width: 11
         height: 11
@@ -353,8 +378,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 283ecba206276f500800000000000000
-      internalID: 429656571819910018
+      spriteID: 9f0c1fa84791d7a50800000000000000
+      internalID: 6520395823840346361
       vertices: []
       indices: 
       edges: []
@@ -375,6 +400,7 @@ TextureImporter:
     nameFileIdTable:
       level_6_0: 3267116452932200593
       level_6_1: 87981934301010580
+      level_6_10: 6520395823840346361
       level_6_2: -4758975174759388319
       level_6_3: -100497173755234427
       level_6_4: -1401783762519750858
