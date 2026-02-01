@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Going on to next level");
         LoadLevel(++currentLevel);
+        GetComponent<AudioSource>().Play();
     }
 
     public void StartGame()
