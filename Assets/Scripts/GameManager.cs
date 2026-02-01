@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private GameObject restartButton;
+    [SerializeField]
+    private CenterBackground background;
 
     private static GameManager _instance;
     public static GameManager Instance
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
         Board.Instance.LoadFromTextAsset(layouts[level]);
         LevelManager.Instance.LoadLevelFromTextAsset(movesets[level]);
         GetComponent<CenterCamera>().Center();
+        background.Center();
         LevelManager.Instance.DrawGridTiles();
         levelNameDisplay.LoadLevel(level);
     }
