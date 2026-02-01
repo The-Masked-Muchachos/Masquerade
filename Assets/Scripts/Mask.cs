@@ -27,10 +27,14 @@ public abstract class Mask : MonoBehaviour
         Activate(Board.Instance);
     }
 
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void Start()
     {
         cam = Camera.main;
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
