@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     private TextAsset[] movesets;
     [SerializeField]
     private LevelNameDisplay levelNameDisplay;
+    
+    [SerializeField]
+    private GameObject restartButton;
 
     private static GameManager _instance;
     public static GameManager Instance
@@ -54,5 +57,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartGame();
+    }
+
+    public void ShowRestartButton()
+    {
+        restartButton.SetActive(true);
+    }
+
+    public void HideRestartButton()
+    {
+        restartButton.SetActive(false);
     }
 }

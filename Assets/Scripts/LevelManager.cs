@@ -32,6 +32,7 @@ public class LevelManager : MonoBehaviour
     private GameObject[,] gridTiles = new GameObject[0, 0];
     private List<MoveType> moves = new();
     private int? currentMove = 0;
+    public int MovesLeft { private set; get; }
 
     public int? CurrentMoveNumber
     {
@@ -158,10 +159,12 @@ public class LevelManager : MonoBehaviour
     {
         currentMove++;
         movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove);
+        this.MovesLeft = moves.Count - (int)currentMove;
 
         if (Board.Instance.IsComplete())
         {
             GameManager.Instance.NextLevel();
+            GameManager.Instance.HideRestartButton();
             return;
         }
 
@@ -169,6 +172,7 @@ public class LevelManager : MonoBehaviour
         {
             currentMove = null;
             Debug.Log("Out of moves!");
+            GameManager.Instance.ShowRestartButton();
             return;
         }
 

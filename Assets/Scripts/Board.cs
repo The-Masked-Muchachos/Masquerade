@@ -125,7 +125,8 @@ public class Board : MonoBehaviour
     public void Undo()
     {
         if (pastStates.Count == 0) return;
-
+        
+        GameManager.Instance.HideRestartButton();
         string savedState = pastStates.Pop();
 
         List<char[]> maskTypes = new List<char[]>();
