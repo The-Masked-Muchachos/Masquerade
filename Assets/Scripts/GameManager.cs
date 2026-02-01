@@ -68,6 +68,12 @@ public class GameManager : MonoBehaviour
         LoadLevel(0);
     }
 
+    public void RestartLevel()
+    {
+        LoadLevel(currentLevel);
+        HideRestartButton();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
