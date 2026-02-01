@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -86,15 +86,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartGame();
+        HideRestartButton();
     }
 
     public void ShowRestartButton()
     {
-        restartButton.SetActive(true);
+        restartButton.GetComponent<Button>().interactable = true;
     }
 
     public void HideRestartButton()
     {
-        restartButton.SetActive(false);
+        restartButton.GetComponent<Button>().interactable = false;
     }
 }
