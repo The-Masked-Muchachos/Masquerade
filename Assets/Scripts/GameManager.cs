@@ -45,9 +45,14 @@ public class GameManager : MonoBehaviour
         LoadLevel(++currentLevel);
     }
 
+    public void StartGame()
+    {
+        LoadLevel(0);
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        LoadLevel(0);
+        StartGame();
     }
 }

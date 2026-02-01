@@ -41,7 +41,7 @@ public class Board : MonoBehaviour
     }
 
     // All the masks currently on the board
-    private GameObject[,] currentState;
+    private GameObject[,] currentState = new GameObject[0,0];
 
     // Previous board states for undoing
     private Stack<string> pastStates;
@@ -68,9 +68,17 @@ public class Board : MonoBehaviour
     // Creates a new board using a file
     public void LoadFromTextAsset(TextAsset textAsset)
     {
+
+
+        foreach (GameObject mask in currentState)
+        {
+            if (mask == null) continue;
+            Destroy(mask);
+        }
+
         List<char[]> maskTypes = new List<char[]>();
 
-        foreach (string line in textAsset.text.Split(new string[] {"\r\n", "\n"}, StringSplitOptions.None))
+        foreach (string line in textAsset.text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None))
         {
             char[] cells = line.ToCharArray();
             maskTypes.Add(cells);
@@ -191,13 +199,13 @@ public class Board : MonoBehaviour
         {
             mask.transform.position = from;
             Vector2 displacement = to - from;
-            
+
             for (float i = 0; i < 1; i += 0.01f)
             {
                 mask.transform.position = from + displacement * i;
                 yield return null;
             }
-            
+
 
             mask.transform.position = to;
         }
@@ -215,7 +223,7 @@ public class Board : MonoBehaviour
         {
             mask.transform.position = from;
             Vector2 displacement = to - from;
-            
+
             for (float i = 0; i < 1; i += 0.01f)
             {
                 mask.transform.position = from + displacement * i;
