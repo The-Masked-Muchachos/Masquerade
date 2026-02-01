@@ -93,5 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7497a57e4e4a789b569d226dffa88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedMask
+  maskSprite: {fileID: 21300000, guid: 8aef4227dce3e4e5586d8226c086fe55, type: 3}
+  arrowSprite: {fileID: 21300000, guid: 7474b4bca72e34407affb4954f2b56f9, type: 3}
   explosionPrefab: {fileID: 4835867202108755363, guid: 91f9af8d626f3486c84f0a884d4b78fd, type: 3}
   dustsplosionPrefab: {fileID: 4835867202108755363, guid: 8ceffa491e4e343978031c1141778f8b, type: 3}

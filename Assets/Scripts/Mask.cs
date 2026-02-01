@@ -18,6 +18,10 @@ public abstract class Mask : MonoBehaviour
     private bool hovering;
     private IEnumerator lastHover;
 
+    [SerializeField] private Sprite maskSprite;
+    [SerializeField] private Sprite arrowSprite;
+    private SpriteRenderer spriteRenderer;
+
     public void OnClick()
     {
         Activate(Board.Instance);
@@ -26,6 +30,7 @@ public abstract class Mask : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -91,4 +96,8 @@ public abstract class Mask : MonoBehaviour
 
     // Activates the masks's special function
     public abstract void Activate(Board board);
+
+    public virtual void ViewMask() { spriteRenderer.sprite = maskSprite; }
+
+    public virtual void ViewArrow() {spriteRenderer.sprite = arrowSprite; }
 }

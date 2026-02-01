@@ -93,5 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac9eb2f9f421476c988ebed1fae7c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::YellowMask
+  maskSprite: {fileID: 21300000, guid: f3c47862749514727b4189e6ea4c8adf, type: 3}
+  arrowSprite: {fileID: 21300000, guid: 10c36a271bb3546a79adb4b41dc70df0, type: 3}
   explosionPrefab: {fileID: 4835867202108755363, guid: 91f9af8d626f3486c84f0a884d4b78fd, type: 3}
   dustsplosionPrefab: {fileID: 4835867202108755363, guid: 8ceffa491e4e343978031c1141778f8b, type: 3}

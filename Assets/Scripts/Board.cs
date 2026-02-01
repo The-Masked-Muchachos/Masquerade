@@ -8,6 +8,9 @@ public class Board : MonoBehaviour
     [SerializeField]
     private bool undo = false;
 
+    [SerializeField] private GameObject filter;
+    public bool IsViewMode {private set; get;}
+    
     void OnValidate()
     {
         if (undo)
@@ -239,4 +242,39 @@ public class Board : MonoBehaviour
         StartCoroutine(GlideToPosition(mask1.gameObject, mask1.gameObject.transform.position, new Vector2(mask1.Column, -mask1.Row)));
         StartCoroutine(GlideToPosition(mask2.gameObject, mask2.gameObject.transform.position, new Vector2(mask2.Column, -mask2.Row)));
     }
+
+    public void ChangeViewMode()
+    {
+        if (IsViewMode == false)
+        {
+            IsViewMode = true;
+            filter.SetActive(true);
+        }
+        else
+        {
+            IsViewMode = false;
+            filter.SetActive(false);
+        }
+        
+        FlipAllMask();
+    }
+
+    public void ResetViewMode()
+    {
+        IsViewMode = false;
+        filter.SetActive(false);
+    }
+
+    private void FlipAllMask()
+    {
+        foreach (GameObject maskObj in currentState)
+        {
+            if (maskObj == null) {continue;}
+            Mask mask = maskObj.GetComponent<Mask>();
+            if (IsViewMode) {mask.ViewArrow();}
+            else {mask.ViewMask();}
+        }
+    }
+    
+    
 }

@@ -93,3 +93,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3e73c7259646ff8f9b7f3b50fff51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GreenMask
+  maskSprite: {fileID: 21300000, guid: 23bcbda71c4924321876c496d7acfb9f, type: 3}
+  arrowSprite: {fileID: 21300000, guid: 1aebe13d76a5041e09b6dd839340660b, type: 3}
