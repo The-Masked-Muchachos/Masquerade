@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -15,6 +16,8 @@ public abstract class Mask : MonoBehaviour
     [NonSerialized]
     public int Column;
 
+    private bool hovering;
+
     public void OnClick()
     {
         Activate(Board.Instance);
@@ -27,6 +30,12 @@ public abstract class Mask : MonoBehaviour
 
     private void Update()
     {
+        transform.rotation = Quaternion.identity;
+
+        if (hovering)
+        {
+            transform.Rotate(new Vector3(0, 0, Mathf.Cos(Time.time * 20) * 5f));
+        }
         float mouseX = Mouse.current.position.x.ReadValue();
         float mouseY = Mouse.current.position.y.ReadValue();
         Vector2 mousePosInWorld = cam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
@@ -35,6 +44,7 @@ public abstract class Mask : MonoBehaviour
         if (hit.collider && (hit.collider.gameObject.GetInstanceID() == this.gameObject.GetInstanceID()))
         {
             LevelManager.Instance.HoverOverGridTileAt(Row, Column);
+            Hover();
 
             if (!Mouse.current.leftButton.wasPressedThisFrame) return;
             Debug.Log(hit.collider.gameObject.GetInstanceID());
@@ -54,6 +64,20 @@ public abstract class Mask : MonoBehaviour
                 return;
             }
         }
+    }
+
+    private void Hover()
+    {
+        StopCoroutine(StopHoveringAfterDelay());
+        StartCoroutine(StopHoveringAfterDelay());
+    }
+
+    public IEnumerator StopHoveringAfterDelay()
+    {
+        hovering = true;
+
+        yield return new WaitForSeconds(0.25f);
+        hovering = false;
     }
 
     // Activates the masks's special function

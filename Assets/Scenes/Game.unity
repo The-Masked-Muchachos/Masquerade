@@ -1059,7 +1059,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: a7a83aef0094d493fa3663165b04acd1, type: 3}
   - {fileID: 4900000, guid: 8cd786b798594fbfa2190123e237cece, type: 3}
   levelNameDisplay: {fileID: 1754556980}
-  restartButton: {fileID: 0}
+  restartButton: {fileID: 1043998863}
 --- !u!4 &700286130
 Transform:
   m_ObjectHideFlags: 0
