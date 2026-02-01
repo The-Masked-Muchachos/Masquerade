@@ -25,6 +25,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private GameObject gridTilePrefab;
+    [SerializeField]
+    private MovesLeftDisplay movesLeftDisplay;
+    private GameObject[,] gridTiles = new GameObject[0, 0];
     private List<MoveType> moves = new();
     private int? currentMove = 0;
 
@@ -97,6 +102,8 @@ public class LevelManager : MonoBehaviour
                 moves.Add(MoveType.Swap);
             }
         }
+
+        movesLeftDisplay.LoadCursors(moves.Count);
     }
 
     public void CheckBoard()
@@ -105,6 +112,34 @@ public class LevelManager : MonoBehaviour
         {
             GameManager.Instance.NextLevel();
         }
+    }
+    
+    public void DrawGridTiles()
+    {
+        foreach (GameObject tile in gridTiles)
+        {
+            Destroy(tile);
+        }
+
+        gridTiles = new GameObject[Board.Instance.NumberOfRows, Board.Instance.NumberOfColumns];
+
+        for (int row = 0; row < Board.Instance.NumberOfRows; row++)
+        {
+            for (int column = 0; column < Board.Instance.NumberOfColumns; column++)
+            {
+                gridTiles[row, column] = Instantiate(gridTilePrefab, new Vector2(column, -row), Quaternion.identity);
+            }
+        }
+    }
+
+    public void HoverOverGridTileAt(int row, int column)
+    {
+        foreach (GameObject tile in gridTiles)
+        {
+            tile.GetComponent<GridTileChangeColor>().GoWhite();
+        }
+
+        gridTiles[row, column].GetComponent<GridTileChangeColor>().GoYellow();
     }
 
     public void MoveInProgress()
@@ -122,6 +157,8 @@ public class LevelManager : MonoBehaviour
     public void NextMove()
     {
         currentMove++;
+        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove);
+
         if (Board.Instance.IsComplete())
         {
             GameManager.Instance.NextLevel();
@@ -141,6 +178,7 @@ public class LevelManager : MonoBehaviour
     public void LastMove()
     {
         if (currentMove == null) currentMove = moves.Count;
+        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove + 1);
 
         currentMove--;
         Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);

@@ -161,7 +161,7 @@ public class Board : MonoBehaviour
     public void AnimateRemoveMaskAt(int row, int column)
     {
         //TODO: Play remove mask animation
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<SoundLibrary>().Crack);
     }
 
     // Add a mask to an empty cell
@@ -181,7 +181,7 @@ public class Board : MonoBehaviour
     // Move mask from one cell to another
     public void AnimateMoveMaskFromTo(int fromRow, int fromColumn, int toRow, int toColumn)
     {
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<SoundLibrary>().Fwip);
 
         GameObject mask = currentState[toRow, toColumn];
         if (mask == null) return;

@@ -3,9 +3,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TextAsset[] layouts;
+    private TextAsset[] layouts;
     [SerializeField]
-    TextAsset[] movesets;
+    private TextAsset[] movesets;
+    [SerializeField]
+    private LevelNameDisplay levelNameDisplay;
 
     private static GameManager _instance;
     public static GameManager Instance
@@ -32,6 +34,9 @@ public class GameManager : MonoBehaviour
     {
         Board.Instance.LoadFromTextAsset(layouts[level]);
         LevelManager.Instance.LoadLevelFromTextAsset(movesets[level]);
+        GetComponent<CenterCamera>().Center();
+        LevelManager.Instance.DrawGridTiles();
+        levelNameDisplay.LoadLevel(level);
     }
 
     public void NextLevel()
@@ -44,11 +49,5 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         LoadLevel(0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
