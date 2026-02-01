@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7872925, y: -38.26541}
+  m_AnchoredPosition: {x: 2.7873535, y: -38.26538}
   m_SizeDelta: {x: 335.4005, y: 241.9893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &967683063
@@ -869,7 +869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.9004822, y: 0.0009765625}
+  m_AnchoredPosition: {x: 0.9005127, y: 0.0009765625}
   m_SizeDelta: {x: 1.801, y: -0.0020752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712729558
@@ -945,7 +945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7872925, y: -38.26541}
+  m_AnchoredPosition: {x: 2.7873535, y: -38.26538}
   m_SizeDelta: {x: 335.4005, y: 241.9893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1932812782
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0b689a62b24c70af7f4b5861d4bf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
-  sceneName: Game
+  sceneName: Main
 --- !u!114 &2047753274
 MonoBehaviour:
   m_ObjectHideFlags: 0

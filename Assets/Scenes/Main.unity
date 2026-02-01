@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 1105420853}
   - component: {fileID: 1105420855}
   - component: {fileID: 1105420854}
+  - component: {fileID: 1105420856}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -348,6 +349,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105420852}
   m_CullTransparentMesh: 1
+--- !u!114 &1105420856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105420852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba36a639249c40159173ecab9a72370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jig
 --- !u!1 &1262711368
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +372,7 @@ GameObject:
   - component: {fileID: 1262711369}
   - component: {fileID: 1262711371}
   - component: {fileID: 1262711370}
+  - component: {fileID: 1262711372}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -423,6 +437,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262711368}
   m_CullTransparentMesh: 1
+--- !u!114 &1262711372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262711368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba36a639249c40159173ecab9a72370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jig
 --- !u!1 &1546599879
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +537,7 @@ GameObject:
   - component: {fileID: 1581331639}
   - component: {fileID: 1581331638}
   - component: {fileID: 1581331640}
+  - component: {fileID: 1581331641}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -812,6 +839,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1581331641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581331632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba36a639249c40159173ecab9a72370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jig
 --- !u!1 &2036501095
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1011,7 @@ GameObject:
   - component: {fileID: 2047753274}
   - component: {fileID: 2047753275}
   - component: {fileID: 2047753276}
+  - component: {fileID: 2047753277}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1273,6 +1313,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2047753277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047753268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba36a639249c40159173ecab9a72370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jig
 --- !u!1 &2061425889
 GameObject:
   m_ObjectHideFlags: 0
