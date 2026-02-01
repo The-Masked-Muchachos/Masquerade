@@ -128,7 +128,7 @@ public class LevelManager : MonoBehaviour
         {
             for (int column = 0; column < Board.Instance.NumberOfColumns; column++)
             {
-                gridTiles[row, column] = Instantiate(gridTilePrefab, new Vector2(column, -row), Quaternion.identity);
+                gridTiles[row, column] = Instantiate(gridTilePrefab, new Vector3(column, -row, 1f), Quaternion.identity);
             }
         }
     }
