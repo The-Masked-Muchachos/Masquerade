@@ -157,7 +157,7 @@ public class LevelManager : MonoBehaviour
     public void NextMove()
     {
         currentMove++;
-        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove + 1);
+        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove);
 
         if (Board.Instance.IsComplete())
         {
