@@ -27,6 +27,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private GameObject gridTilePrefab;
+    [SerializeField]
+    private MovesLeftDisplay movesLeftDisplay;
     private GameObject[,] gridTiles = new GameObject[0, 0];
     private List<MoveType> moves = new();
     private int? currentMove = 0;
@@ -100,6 +102,8 @@ public class LevelManager : MonoBehaviour
                 moves.Add(MoveType.Swap);
             }
         }
+
+        movesLeftDisplay.LoadCursors(moves.Count);
     }
 
     public void CheckBoard()
@@ -153,6 +157,8 @@ public class LevelManager : MonoBehaviour
     public void NextMove()
     {
         currentMove++;
+        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove + 1);
+
         if (Board.Instance.IsComplete())
         {
             GameManager.Instance.NextLevel();
@@ -172,6 +178,7 @@ public class LevelManager : MonoBehaviour
     public void LastMove()
     {
         if (currentMove == null) currentMove = moves.Count;
+        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove + 1);
 
         currentMove--;
         Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);
