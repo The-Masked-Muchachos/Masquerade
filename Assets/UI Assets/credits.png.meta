@@ -146,24 +146,6 @@ TextureImporter:
   - first:
       213: -491188955860553601
     second: credits_47
-  - first:
-      213: 4651676864871811742
-    second: credits_48
-  - first:
-      213: 3310623312146999298
-    second: credits_49
-  - first:
-      213: 1554879945811548566
-    second: credits_50
-  - first:
-      213: 3828227083020996506
-    second: credits_51
-  - first:
-      213: 554462039273394800
-    second: credits_52
-  - first:
-      213: 7714128557767807226
-    second: credits_53
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -276,9 +258,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 247
-        width: 30
-        height: 55
+        y: 203
+        width: 52
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +279,10 @@ TextureImporter:
       name: credits_1
       rect:
         serializedVersion: 2
-        x: 27
-        y: 242
-        width: 72
-        height: 60
+        x: 51
+        y: 204
+        width: 14
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +301,10 @@ TextureImporter:
       name: credits_2
       rect:
         serializedVersion: 2
-        x: 97
-        y: 246
+        x: 63
+        y: 189
         width: 31
-        height: 56
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +323,10 @@ TextureImporter:
       name: credits_3
       rect:
         serializedVersion: 2
-        x: 129
-        y: 247
-        width: 13
-        height: 54
+        x: 101
+        y: 203
+        width: 65
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +345,10 @@ TextureImporter:
       name: credits_4
       rect:
         serializedVersion: 2
-        x: 142
-        y: 247
-        width: 30
-        height: 54
+        x: 147
+        y: 223
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +367,10 @@ TextureImporter:
       name: credits_5
       rect:
         serializedVersion: 2
-        x: 172
-        y: 248
-        width: 29
-        height: 53
+        x: 195
+        y: 203
+        width: 38
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +389,10 @@ TextureImporter:
       name: credits_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 203
-        width: 52
-        height: 26
+        x: 175
+        y: 211
+        width: 13
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,10 +411,10 @@ TextureImporter:
       name: credits_7
       rect:
         serializedVersion: 2
-        x: 51
-        y: 204
-        width: 14
-        height: 19
+        x: 0
+        y: 153
+        width: 41
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +433,10 @@ TextureImporter:
       name: credits_8
       rect:
         serializedVersion: 2
-        x: 63
-        y: 189
-        width: 31
-        height: 34
+        x: 16
+        y: 173
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,9 +455,9 @@ TextureImporter:
       name: credits_9
       rect:
         serializedVersion: 2
-        x: 101
-        y: 203
-        width: 65
+        x: 46
+        y: 153
+        width: 41
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -495,10 +477,10 @@ TextureImporter:
       name: credits_10
       rect:
         serializedVersion: 2
-        x: 147
-        y: 223
-        width: 6
-        height: 8
+        x: 86
+        y: 153
+        width: 29
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +499,10 @@ TextureImporter:
       name: credits_11
       rect:
         serializedVersion: 2
-        x: 195
-        y: 203
-        width: 38
-        height: 26
+        x: 118
+        y: 153
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,10 +521,10 @@ TextureImporter:
       name: credits_12
       rect:
         serializedVersion: 2
-        x: 175
-        y: 211
-        width: 13
-        height: 7
+        x: 134
+        y: 153
+        width: 51
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,10 +543,10 @@ TextureImporter:
       name: credits_13
       rect:
         serializedVersion: 2
-        x: 0
+        x: 184
         y: 153
-        width: 41
-        height: 26
+        width: 11
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,10 +565,10 @@ TextureImporter:
       name: credits_14
       rect:
         serializedVersion: 2
-        x: 16
-        y: 173
-        width: 6
-        height: 8
+        x: 222
+        y: 145
+        width: 15
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,10 +587,10 @@ TextureImporter:
       name: credits_15
       rect:
         serializedVersion: 2
-        x: 46
+        x: 236
         y: 153
-        width: 41
-        height: 26
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,10 +609,10 @@ TextureImporter:
       name: credits_16
       rect:
         serializedVersion: 2
-        x: 86
-        y: 153
-        width: 29
-        height: 20
+        x: 252
+        y: 140
+        width: 26
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,7 +631,7 @@ TextureImporter:
       name: credits_17
       rect:
         serializedVersion: 2
-        x: 118
+        x: 277
         y: 153
         width: 16
         height: 20
@@ -671,9 +653,9 @@ TextureImporter:
       name: credits_18
       rect:
         serializedVersion: 2
-        x: 134
+        x: 293
         y: 153
-        width: 51
+        width: 68
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -693,10 +675,10 @@ TextureImporter:
       name: credits_19
       rect:
         serializedVersion: 2
-        x: 184
-        y: 153
-        width: 11
-        height: 20
+        x: 351
+        y: 173
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,10 +697,10 @@ TextureImporter:
       name: credits_20
       rect:
         serializedVersion: 2
-        x: 222
-        y: 145
-        width: 15
-        height: 28
+        x: 359
+        y: 140
+        width: 29
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -737,10 +719,10 @@ TextureImporter:
       name: credits_21
       rect:
         serializedVersion: 2
-        x: 236
-        y: 153
-        width: 16
-        height: 20
+        x: 203
+        y: 161
+        width: 13
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -759,9 +741,9 @@ TextureImporter:
       name: credits_22
       rect:
         serializedVersion: 2
-        x: 252
-        y: 140
-        width: 26
+        x: 0
+        y: 92
+        width: 57
         height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -781,10 +763,10 @@ TextureImporter:
       name: credits_23
       rect:
         serializedVersion: 2
-        x: 277
-        y: 153
-        width: 16
-        height: 20
+        x: 21
+        y: 125
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -803,10 +785,10 @@ TextureImporter:
       name: credits_24
       rect:
         serializedVersion: 2
-        x: 293
-        y: 153
-        width: 68
-        height: 20
+        x: 56
+        y: 105
+        width: 13
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,10 +807,10 @@ TextureImporter:
       name: credits_25
       rect:
         serializedVersion: 2
-        x: 351
-        y: 173
-        width: 6
-        height: 8
+        x: 69
+        y: 92
+        width: 39
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -847,10 +829,10 @@ TextureImporter:
       name: credits_26
       rect:
         serializedVersion: 2
-        x: 359
-        y: 140
-        width: 29
-        height: 33
+        x: 116
+        y: 105
+        width: 45
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -869,10 +851,10 @@ TextureImporter:
       name: credits_27
       rect:
         serializedVersion: 2
-        x: 203
-        y: 161
-        width: 13
-        height: 7
+        x: 159
+        y: 92
+        width: 29
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -891,10 +873,10 @@ TextureImporter:
       name: credits_28
       rect:
         serializedVersion: 2
-        x: 0
-        y: 92
-        width: 57
-        height: 33
+        x: 216
+        y: 97
+        width: 15
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -913,10 +895,10 @@ TextureImporter:
       name: credits_29
       rect:
         serializedVersion: 2
-        x: 21
-        y: 125
-        width: 6
-        height: 8
+        x: 230
+        y: 105
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -935,10 +917,10 @@ TextureImporter:
       name: credits_30
       rect:
         serializedVersion: 2
-        x: 56
-        y: 105
-        width: 13
-        height: 26
+        x: 246
+        y: 92
+        width: 26
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -957,10 +939,10 @@ TextureImporter:
       name: credits_31
       rect:
         serializedVersion: 2
-        x: 69
-        y: 92
-        width: 39
-        height: 33
+        x: 272
+        y: 105
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -979,10 +961,10 @@ TextureImporter:
       name: credits_32
       rect:
         serializedVersion: 2
-        x: 116
-        y: 105
-        width: 45
-        height: 26
+        x: 287
+        y: 92
+        width: 95
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1001,10 +983,10 @@ TextureImporter:
       name: credits_33
       rect:
         serializedVersion: 2
-        x: 159
-        y: 92
-        width: 29
-        height: 33
+        x: 346
+        y: 125
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1023,10 +1005,10 @@ TextureImporter:
       name: credits_34
       rect:
         serializedVersion: 2
-        x: 216
-        y: 97
-        width: 15
-        height: 28
+        x: 198
+        y: 113
+        width: 13
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,9 +1027,9 @@ TextureImporter:
       name: credits_35
       rect:
         serializedVersion: 2
-        x: 230
-        y: 105
-        width: 16
+        x: 0
+        y: 56
+        width: 39
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1067,10 +1049,10 @@ TextureImporter:
       name: credits_36
       rect:
         serializedVersion: 2
-        x: 246
-        y: 92
-        width: 26
-        height: 33
+        x: 38
+        y: 56
+        width: 35
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1089,10 +1071,10 @@ TextureImporter:
       name: credits_37
       rect:
         serializedVersion: 2
-        x: 272
-        y: 105
-        width: 16
-        height: 20
+        x: 72
+        y: 56
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1111,10 +1093,10 @@ TextureImporter:
       name: credits_38
       rect:
         serializedVersion: 2
-        x: 287
-        y: 92
-        width: 95
-        height: 33
+        x: 105
+        y: 56
+        width: 41
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1133,8 +1115,8 @@ TextureImporter:
       name: credits_39
       rect:
         serializedVersion: 2
-        x: 346
-        y: 125
+        x: 136
+        y: 76
         width: 6
         height: 8
       alignment: 0
@@ -1155,10 +1137,10 @@ TextureImporter:
       name: credits_40
       rect:
         serializedVersion: 2
-        x: 198
-        y: 113
-        width: 13
-        height: 7
+        x: 145
+        y: 56
+        width: 26
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1177,10 +1159,10 @@ TextureImporter:
       name: credits_41
       rect:
         serializedVersion: 2
-        x: 0
-        y: 56
-        width: 39
-        height: 20
+        x: 190
+        y: 43
+        width: 22
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1199,9 +1181,9 @@ TextureImporter:
       name: credits_42
       rect:
         serializedVersion: 2
-        x: 38
+        x: 213
         y: 56
-        width: 35
+        width: 51
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1221,9 +1203,9 @@ TextureImporter:
       name: credits_43
       rect:
         serializedVersion: 2
-        x: 72
+        x: 269
         y: 56
-        width: 27
+        width: 36
         height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1243,10 +1225,10 @@ TextureImporter:
       name: credits_44
       rect:
         serializedVersion: 2
-        x: 105
-        y: 56
-        width: 41
-        height: 26
+        x: 303
+        y: 43
+        width: 22
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1265,7 +1247,7 @@ TextureImporter:
       name: credits_45
       rect:
         serializedVersion: 2
-        x: 136
+        x: 304
         y: 76
         width: 6
         height: 8
@@ -1287,9 +1269,9 @@ TextureImporter:
       name: credits_46
       rect:
         serializedVersion: 2
-        x: 145
+        x: 325
         y: 56
-        width: 26
+        width: 19
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1309,138 +1291,6 @@ TextureImporter:
       name: credits_47
       rect:
         serializedVersion: 2
-        x: 190
-        y: 43
-        width: 22
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f7036504f32fe29f0800000000000000
-      internalID: -491188955860553601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: credits_48
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 56
-        width: 51
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9a469486731e8040800000000000000
-      internalID: 4651676864871811742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: credits_49
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 56
-        width: 36
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20826a9ac52b1fd20800000000000000
-      internalID: 3310623312146999298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: credits_50
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 43
-        width: 22
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 699d976921b049510800000000000000
-      internalID: 1554879945811548566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: credits_51
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 76
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9f0ffacf38902530800000000000000
-      internalID: 3828227083020996506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: credits_52
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 56
-        width: 19
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 072545c7948d1b700800000000000000
-      internalID: 554462039273394800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: credits_53
-      rect:
-        serializedVersion: 2
         x: 179
         y: 64
         width: 13
@@ -1453,8 +1303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af052755d071e0b60800000000000000
-      internalID: 7714128557767807226
+      spriteID: f7036504f32fe29f0800000000000000
+      internalID: -491188955860553601
       vertices: []
       indices: 
       edges: []
@@ -1516,13 +1366,7 @@ TextureImporter:
       credits_45: -1058751933257725831
       credits_46: 289155649038839353
       credits_47: -491188955860553601
-      credits_48: 4651676864871811742
-      credits_49: 3310623312146999298
       credits_5: -4351946865466845592
-      credits_50: 1554879945811548566
-      credits_51: 3828227083020996506
-      credits_52: 554462039273394800
-      credits_53: 7714128557767807226
       credits_6: 2239952962376120338
       credits_7: 1893597706070973196
       credits_8: 5078419800979956328
