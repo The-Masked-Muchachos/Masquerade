@@ -29,7 +29,7 @@ public class YellowMask : Mask
 
         board.SetMaskAt(Row, Column, null);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         Instantiate(explosionPrefab, new Vector2(Column, -Row), Quaternion.identity);
 
