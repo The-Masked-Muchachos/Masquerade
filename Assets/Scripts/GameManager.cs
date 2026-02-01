@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
@@ -49,8 +50,16 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("Going on to next level");
-        LoadLevel(++currentLevel);
-        GetComponent<AudioSource>().Play();
+        if (currentLevel + 1 > layouts.Length - 1)
+        {
+            SceneManager.LoadScene("Victory");
+        }
+        else
+        {
+            LoadLevel(++currentLevel);
+            GetComponent<AudioSource>().Play();
+        }
+        
     }
 
     public void StartGame()
