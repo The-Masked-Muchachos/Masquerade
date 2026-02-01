@@ -45,6 +45,14 @@ public class GameManager : MonoBehaviour
         background.Center();
         LevelManager.Instance.DrawGridTiles();
         levelNameDisplay.LoadLevel(level);
+
+        if (level == 9)
+        {
+            Camera.main.orthographicSize = 7;
+        } else
+        {
+            Camera.main.orthographicSize = 5;
+        }
     }
 
     public void NextLevel()
