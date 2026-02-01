@@ -1218,7 +1218,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: f265c2bcba75140ddbb6ab1e84d4d251, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2236,6 +2236,7 @@ MonoBehaviour:
   - {fileID: 1528524250}
   - {fileID: 700845576}
   - {fileID: 1687087261}
+  undoButton: {fileID: 1746481623}
 --- !u!1 &1746481621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2305,8 +2306,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: -3649404235053319196, guid: 80922780b2cae44ef8769177075766a8, type: 3}
     m_PressedSprite: {fileID: -3649404235053319196, guid: 80922780b2cae44ef8769177075766a8, type: 3}
-    m_SelectedSprite: {fileID: 9025373076087335322, guid: 8e9737a28371747b59e6d7300f4e55ff, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: -4313420637086403812, guid: 7f006905919184e5fa150c9cc4128995, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted

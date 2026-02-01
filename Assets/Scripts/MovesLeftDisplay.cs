@@ -7,6 +7,9 @@ public class MovesLeftDisplay : MonoBehaviour
     [SerializeField]
     private GameObject[] cursors;
 
+    [SerializeField]
+    private Button undoButton;
+
     public void LoadCursors(int moves)
     {
         for (int i = 0; i < cursors.Length; i++)
@@ -19,5 +22,8 @@ public class MovesLeftDisplay : MonoBehaviour
         {
             cursors[i].GetComponent<Image>().enabled = true;
         }
+
+        if (LevelManager.Instance.CurrentMoveNumber == 0) undoButton.interactable = false;
+        else undoButton.interactable = true;
     }
 }

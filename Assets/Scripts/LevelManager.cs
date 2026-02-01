@@ -159,7 +159,7 @@ public class LevelManager : MonoBehaviour
     {
         currentMove++;
         movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove);
-        this.MovesLeft = moves.Count - (int)currentMove;
+        MovesLeft = moves.Count - (int)currentMove;
 
         if (Board.Instance.IsComplete())
         {
@@ -182,9 +182,10 @@ public class LevelManager : MonoBehaviour
     public void LastMove()
     {
         if (currentMove == null) currentMove = moves.Count;
-        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove + 1);
-
         currentMove--;
+
+        movesLeftDisplay.LoadCursors(moves.Count - (int)currentMove);
+
         Debug.Log("On move " + (currentMove + 1) + ": " + CurrentMoveType);
     }
 
