@@ -10,6 +10,9 @@ public class Board : MonoBehaviour
 
     [SerializeField] private GameObject filter;
     public bool IsViewMode {private set; get;}
+
+    [SerializeField] private GameObject activeButton;
+    [SerializeField] private GameObject inactiveButton;
     
     void OnValidate()
     {
@@ -250,11 +253,12 @@ public class Board : MonoBehaviour
         {
             IsViewMode = true;
             filter.SetActive(true);
+            activeButton.SetActive(true);
+            inactiveButton.SetActive(false);
         }
         else
         {
-            IsViewMode = false;
-            filter.SetActive(false);
+            ResetViewMode();
         }
         
         FlipAllMask();
@@ -264,6 +268,8 @@ public class Board : MonoBehaviour
     {
         IsViewMode = false;
         filter.SetActive(false);
+        activeButton.SetActive(false);
+        inactiveButton.SetActive(true);
     }
 
     private void FlipAllMask()
