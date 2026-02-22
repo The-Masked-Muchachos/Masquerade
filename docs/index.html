@@ -52,14 +52,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/web-no-comression.loader.js";
+      var loaderUrl = buildUrl + "/docs.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/web-no-comression.data",
-        frameworkUrl: buildUrl + "/web-no-comression.framework.js",
-        codeUrl: buildUrl + "/web-no-comression.wasm",
+        dataUrl: buildUrl + "/docs.data",
+        frameworkUrl: buildUrl + "/docs.framework.js",
+        codeUrl: buildUrl + "/docs.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "The Masked Muchachos",
         productName: "Masquerade",
         productVersion: "1.0",
         showBanner: unityShowBanner,
@@ -108,6 +108,7 @@
         canvas.style.height = "600px";
       }
 
+      canvas.style.background = "url('" + buildUrl + "/docs.jpg') center / cover";
       document.querySelector("#unity-loading-bar").style.display = "block";
 
       var script = document.createElement("script");
