@@ -48,8 +48,11 @@ public abstract class Mask : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, Mathf.Cos(Time.time * 20) * 10f));
             transform.localScale = Vector3.one * Mathf.Cos(Time.time * 20) * 0.15f + Vector3.one;
         }
-        float mouseX = Mouse.current.position.x.ReadValue();
-        float mouseY = Mouse.current.position.y.ReadValue();
+        
+        
+        float mouseX = Board.Instance.MousePosition.x;
+        float mouseY = Board.Instance.MousePosition.y;
+        /*Debug.Log((Vector2) Board.Instance.UserInputs.UI.Point);*/
         
         
         
@@ -60,7 +63,7 @@ public abstract class Mask : MonoBehaviour
         {
             LevelManager.Instance.HoverOverGridTileAt(Row, Column);
 
-            if (!Mouse.current.leftButton.wasPressedThisFrame)
+            if (!Board.Instance.UserInputs.UI.Click.WasPressedThisFrame())
             {
                 Hover();
                 return;

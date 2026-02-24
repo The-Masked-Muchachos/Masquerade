@@ -3810,6 +3810,7 @@ MonoBehaviour:
   filter: {fileID: 1754101537}
   activeButton: {fileID: 1691719482}
   inactiveButton: {fileID: 497750121}
+  MousePosition: {x: 0, y: 0}
 --- !u!4 &1809430709
 Transform:
   m_ObjectHideFlags: 0

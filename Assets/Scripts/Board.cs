@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Board : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Board : MonoBehaviour
 
     [SerializeField] private GameObject activeButton;
     [SerializeField] private GameObject inactiveButton;
+
+    public UserInput UserInputs;
+    public Vector2 MousePosition;
     
     void OnValidate()
     {
@@ -44,6 +48,10 @@ public class Board : MonoBehaviour
 
     void Start()
     {
+        UserInputs = new UserInput();
+        UserInputs.Enable();
+        UserInputs.UI.Point.performed += context => { MousePosition = context.ReadValue<Vector2>(); };
+        /*UserInputs.UI.Click.performed += context => { MousePosition = context.ReadValue<Vector2>(); };*/
     }
 
     // All the masks currently on the board
